@@ -1,5 +1,5 @@
 <template>
-    <div class="content-topper">
+    <div class="content__topper">
         <div class="contact-tab" id="nav-tabs">
         <ul>
             <li><button class="navbutton nav-active" @click="showProjects($event)" id="about-toggle">ABOUT ME</button></li>
@@ -17,8 +17,19 @@
 export default {
     name: 'ContentTopper'
 };
+
 </script>
 
 <style lang="scss" scoped>
+
+.content__topper {
+    height: 500px;
+	width: 200vw;
+	transform: rotate(-6deg);
+	transform-origin: top left;
+	position: absolute;
+	z-index: 5;
+	background-color: white;
+}
 
 </style>
