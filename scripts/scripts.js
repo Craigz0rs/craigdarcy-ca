@@ -79,17 +79,17 @@ projects_toggle.addEventListener('click', function() {
  })
 
  const classChange = (nowActive, nowInactive) => {
-   nowActive.classList.add('nav-active')
-   nowActive.classList.remove('nav-inactive')
-   nowInactive.classList.add('nav-inactive')
-   nowInactive.classList.remove('nav-active')
-   if (nowActive === about_toggle) {
-     about_me.style.display = "block"
-     projects.style.display = "none"
-   } else {
-     about_me.style.display = "none"
-     projects.style.display = "block"
-   }
+  //  nowActive.classList.add('nav-active')
+  //  nowActive.classList.remove('nav-inactive')
+  //  nowInactive.classList.add('nav-inactive')
+  //  nowInactive.classList.remove('nav-active')
+  //  if (nowActive === about_toggle) {
+  //    about_me.style.display = "block"
+  //    projects.style.display = "none"
+  //  } else {
+  //    about_me.style.display = "none"
+  //    projects.style.display = "block"
+  //  }
  }
 
 // var tile = document.getElementsByClassName("project")[0];
