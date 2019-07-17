@@ -17,5 +17,11 @@ export default {
 
 <style lang="scss" scoped>
 
+.content {
+    background-color: white;
+	position: relative;
+	z-index: 5;
+}
+
 </style>
 
