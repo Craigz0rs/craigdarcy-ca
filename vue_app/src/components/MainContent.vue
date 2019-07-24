@@ -1,16 +1,22 @@
 <template>
     <div class="content">
         <ContentTopper />
+        <AboutMe />
+        <projects />
     </div>
 </template>
 
 <script>
 import ContentTopper from "./ContentTopper.vue"
+import AboutMe from "./AboutMe.vue"
+import Projects from "./Projects.vue"
 
 export default {
     name: 'MainContent',
     components: {
-        ContentTopper
+        ContentTopper,
+        AboutMe,
+        Projects
     }
 };
 </script>
