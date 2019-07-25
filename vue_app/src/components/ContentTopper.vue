@@ -3,7 +3,7 @@
         <div class="contact-tab" id="nav-tabs">
         <ul>
             <li v-for="button in buttons" v-bind:key="button.id"><Button v-html="button.title" v-bind:classes="button.classes" /></li>
-            <li v-for="anchor in anchors" v-bind:key="anchor.id"><Anchor v-html="anchor.title" v-bind:classes="anchor.classes" v-bind:target="anchor.target" v-bind:href="anchor.href" /></li>
+            <li v-for="anchor in anchors" v-bind:key="anchor.id"><BaseAnchor v-html="anchor.title" v-bind:classes="anchor.classes" v-bind:target="anchor.target" v-bind:href="anchor.href" /></li>
             <!-- <li><button class="navbutton nav-active" @click="showProjects($event)" id="about-toggle">ABOUT ME</button></li>
             <li><button class="navbutton" @click="showProjects($event)" id="project-toggle">MY WORK</button></li> -->
             <!-- <li><a target="_blank" href="http://www.linkedin.com/in/craigdarcy" class="social secondary"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
@@ -16,7 +16,7 @@
 
 <script>
 import Button from "./Button.vue"
-import Anchor from "./Anchor.vue"
+import BaseAnchor from "./BaseAnchor.vue"
 
 export default {
     name: 'ContentTopper',

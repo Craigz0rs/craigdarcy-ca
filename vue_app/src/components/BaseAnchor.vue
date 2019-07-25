@@ -4,7 +4,7 @@
 
 <script>
 export default {
-    name: 'Anchor',
+    name: 'BaseAnchor',
     props: [
         'href',
         'target',
