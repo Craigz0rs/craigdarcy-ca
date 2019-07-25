@@ -1,14 +1,13 @@
 <template>
-    <button v-bind:class="classes"> {{ title }} </button>
+    <button :class="classes"></button>
 </template>
 
 <script>
 export default {
     name: 'BaseButton',
-    props: [
-        'title',
-        'classes'
-    ]
+    props: {
+        classes: String
+    }
 }
 </script>
 
