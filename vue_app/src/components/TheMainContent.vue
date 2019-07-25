@@ -12,7 +12,7 @@ import AboutMe from "./AboutMe.vue"
 import Projects from "./Projects.vue"
 
 export default {
-    name: 'MainContent',
+    name: 'TheMainContent',
     components: {
         ContentTopper,
         AboutMe,
