@@ -10,7 +10,7 @@
 import Project from "./Project.vue"
 
 export default {
-    name: "projects",
+    name: "ProjectList",
     components: {
         Project
     },
