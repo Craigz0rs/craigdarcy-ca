@@ -2,7 +2,7 @@
     <section id="projects">
         <h1>Projects</h1>
         <div class="project-list-wrapper">
-            <ProjectListing v-for="project in projects" :key="project.id" :title="project.title" :imageSrc="project.imageSrc" :imageAlt="project.imageAlt" :imageTitle="project.imageTitle" :aUrl="project.aUrl" />
+            <ProjectListing v-for="project in projects" :key="project.id" :title="project.title" :image-src="project.imageSrc" :image-alt="project.imageAlt" :image-title="project.imageTitle" :url="project.url" />
         </div>
     </section>
 </template>
@@ -23,7 +23,7 @@ export default {
                     imageSrc: "../assets/teamhd.jpg", 
                     imageAlt: "HD Training Project", 
                     imageTitle: "HD Training Site Project", 
-                    aUrl: "https://hdtraining.maxrepmedia.com" 
+                    url: "https://hdtraining.maxrepmedia.com" 
                 },
                 {   
                     id: "project2", 
@@ -31,7 +31,7 @@ export default {
                     imageSrc: "../assets/jscalc.png", 
                     imageAlt: "JS Calculator Project", 
                     imageTitle: "JS Calculator App Project", 
-                    aUrl: "https://craigdarcy.ca/jscalculator/" 
+                    url: "https://craigdarcy.ca/jscalculator/" 
                 },
                 {   
                     id: "project3", 
@@ -39,7 +39,7 @@ export default {
                     imageSrc: "../assets/hangar49.jpg", 
                     imageAlt: "Hangar 49 Project", 
                     imageTitle: "JS Calculator Site Project", 
-                    aUrl: "http://www.craigdarcy.ca/hangar49/" 
+                    url: "http://www.craigdarcy.ca/hangar49/" 
                 }
             ]
         }
