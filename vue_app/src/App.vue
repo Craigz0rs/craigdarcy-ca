@@ -1,14 +1,12 @@
 <template>
   <div id="app">
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-    <TheHeader/>
-    <TheHero/>
-    <TheMainContent/>
+    <TheHeader />
+    <TheHero />
+    <TheMainContent />
   </div>
 </template>
 
 <script>
-// import HelloWorld from "./components/HelloWorld.vue";
 import TheHeader from "./components/TheHeader.vue";
 import TheHero from "./components/TheHero.vue";
 import TheMainContent from "./components/TheMainContent.vue";
