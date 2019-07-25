@@ -45,7 +45,7 @@ export default {
           icon: "<i class='fa fa-envelope' aria-hidden='true'></i>"
         }
       ]
-    }
+    };
   }
 };
 </script>
@@ -58,10 +58,5 @@ header {
   top: 0;
   width: 100%;
   z-index: 99;
-}
-
-.social_fixed {
-  display: flex;
-  justify-content: flex-end;
 }
 </style>
