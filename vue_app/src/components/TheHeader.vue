@@ -1,29 +1,52 @@
 <template>
   <header>
     <ul class="social_fixed">
-      <li>
-        <a target="_blank" href="http://www.linkedin.com/in/craigdarcy" class="social fixed">
-          <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-        </a>
+      <li v-for="anchor in anchors" :key="anchor.id">
+        <BaseAnchor
+          :href="anchor.href"
+          :target="anchor.target"
+          :classes="anchor.classes"
+          v-html="anchor.icon"
+        />
       </li>
-      <li>
-        <a target="_blank" href="https://github.com/Craigz0rs" class="social fixed">
-          <i class="fa fa-github-square" aria-hidden="true"></i>
-        </a>
-      </li>
-      <li>
-        <a href="mailto:hello@craigdarcy.ca" class="email fixed">
-          <i class="fa fa-envelope" aria-hidden="true"></i>
-        </a>
-        <br class="responsive-break" />
-      </li>
+      <br class="responsive-break" />
     </ul>
   </header>
 </template>
 
 <script>
+import BaseAnchor from "./BaseAnchor.vue";
 export default {
-  name: "TheHeader"
+  name: "TheHeader",
+  components: {
+    BaseAnchor
+  },
+  data() {
+    return {
+      anchors: [
+        {
+          id: "1",
+          href: "http://www.linkedin.com/in/craigdarcy",
+          target: "_blank",
+          classes: "social fixed",
+          icon: "<i class='fa fa-linkedin-square' aria-hidden='true'></i>"
+        },
+        {
+          id: "2",
+          href: "https://github.com/Craigz0rs",
+          target: "_blank",
+          classes: "social fixed",
+          icon: "<i class='fa fa-github-square' aria-hidden='true'></i>"
+        },
+        {
+          id: "3",
+          href: "mailto:hello@craigdarcy.ca",
+          classes: "email fixed",
+          icon: "<i class='fa fa-envelope' aria-hidden='true'></i>"
+        }
+      ]
+    }
+  }
 };
 </script>
 
