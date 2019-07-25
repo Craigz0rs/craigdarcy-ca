@@ -1,15 +1,15 @@
 <template>
-    <a v-bind:href="href" v-bind:target="target" v-bind:class="classes"></a>
+    <a :href="href" :target="target" :class="classes"></a>
 </template>
 
 <script>
 export default {
     name: 'BaseAnchor',
-    props: [
-        'href',
-        'target',
-        'classes'
-    ]
+    props: {
+        href: String,
+        target: String,
+        classes: String
+    }
 }
 </script>
 
