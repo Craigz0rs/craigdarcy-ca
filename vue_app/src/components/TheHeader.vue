@@ -1,6 +1,6 @@
 <template>
-  <header>
-    <ul class="social_fixed">
+  <header class="header">
+    <ul class="header__social-list">
       <li v-for="anchor in anchors" :key="anchor.id">
         <BaseAnchor
           :href="anchor.href"
@@ -53,10 +53,14 @@ export default {
 <style lang="scss">
 @import url("../assets/styles/import.scss");
 
-header {
+.header {
   position: absolute;
   top: 0;
   width: 100%;
   z-index: 99;
+
+  &__social-list {
+    
+  }
 }
 </style>
