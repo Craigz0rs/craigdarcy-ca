@@ -2,17 +2,17 @@
     <section id="projects">
         <h1>Projects</h1>
         <div class="project-list-wrapper">
-            <Project v-for="project in projects" :key="project.id" :title="project.title" :imageSrc="project.imageSrc" :imageAlt="project.imageAlt" :imageTitle="project.imageTitle" :aUrl="project.aUrl" />
+            <ProjectListing v-for="project in projects" :key="project.id" :title="project.title" :imageSrc="project.imageSrc" :imageAlt="project.imageAlt" :imageTitle="project.imageTitle" :aUrl="project.aUrl" />
         </div>
     </section>
 </template>
 <script>
-import Project from "./Project.vue"
+import ProjectListing from "./ProjectListing.vue"
 
 export default {
     name: "ProjectList",
     components: {
-        Project
+        ProjectListing
     },
     data: function() {
         return {
