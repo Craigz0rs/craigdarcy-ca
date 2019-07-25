@@ -2,8 +2,8 @@
   <div class="content__topper">
     <div class="contact-tab" id="nav-tabs">
       <ul>
-        <li v-for="button in buttons" v-bind:key="button.id">
-          <BaseButton v-html="button.title" v-bind:classes="button.classes" />
+        <li v-for="button in buttons" :key="button.id">
+          <BaseButton v-html="button.title" :classes="button.classes" @click.native="toggle($event)" />
         </li>
         <li v-for="anchor in anchors" v-bind:key="anchor.id">
           <BaseAnchor
@@ -36,9 +36,10 @@ export default {
   data() {
     return {
       buttons: [
-        { id: "button1", title: "ABOUT ME", classes: "navbutton" },
-        { id: "button2", title: "MY WORK", classes: "navbutton" }
+        { id: "button1", title: "ABOUT ME", classes: ["navbutton", "nav-active"], isActive: true },
+        { id: "button2", title: "MY WORK", classes: ["navbutton"], isActive: false }
       ],
+
 
       anchors: [
         {
@@ -64,6 +65,20 @@ export default {
         }
       ]
     };
+  },
+  methods: {
+    toggle(event) {
+      console.log(event)
+      this.toggleButtonActive()
+    },
+    toggleButtonActive() {
+      this.isActive = !this.isActive;
+      console.log(this)
+      // if(this.classes.includes("nav-active")) {
+      //   let i = this.classes.indexOf(this.classes.includes("nav-active"));
+        
+      // }
+    }
   }
 };
 </script>

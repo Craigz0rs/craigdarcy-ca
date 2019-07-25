@@ -6,8 +6,8 @@
 export default {
   name: "BaseButton",
   props: {
-    classes: String
-  }
+    classes: Array
+  },
 };
 </script>
 
