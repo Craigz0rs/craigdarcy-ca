@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <HelloWorld msg="Welcome to Your Vue.js App" />
-    <Header/>
+    <TheHeader/>
     <Hero/>
     <MainContent/>
   </div>
@@ -9,14 +9,14 @@
 
 <script>
 // import HelloWorld from "./components/HelloWorld.vue";
-import Header from "./components/Header.vue";
+import TheHeader from "./components/TheHeader.vue";
 import Hero from "./components/Hero.vue";
 import MainContent from "./components/MainContent.vue";
 
 export default {
   name: "app",
   components: {
-    Header,
+    TheHeader,
     Hero,
     MainContent
   }
