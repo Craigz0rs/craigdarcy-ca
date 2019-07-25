@@ -21,7 +21,7 @@
 
 <script>
 export default {
-    name: "about-me",
+    name: "AboutMe",
 }
 </script>
 
