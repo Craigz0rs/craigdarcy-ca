@@ -1,5 +1,9 @@
 <template>
-
+  <ul>
+    <li v-for="link in anchors" :key="link.id">
+      <BaseAnchor v-html="link.title" :target="link.target" :href="link.href" :classes="link.classes" />
+    </li>
+  </ul>
 </template>
 <script>
 import BaseAnchor from "./BaseAnchor.vue";
@@ -7,6 +11,12 @@ export default {
   name: "SocialAnchorList",
   components: {
     BaseAnchor
+  },
+  props: {
+    classModifier: {
+      type: String,
+      default: ""
+    }
   },
   data() {
     return {
@@ -16,14 +26,14 @@ export default {
           title: "<i aria-hidden='true' class='fa fa-linkedin-square'></i>",
           target: "_blank",
           href: "http://www.linkedin.com/in/craigdarcy",
-          classes: "social secondary"
+          classes: "social" + this.classModifier + " secondary"
         },
         {
           id: "anchor2",
           title: "<i class='fa fa-github-square' aria-hidden='true'></i>",
           target: "_blank",
           href: "https://github.com/Craigz0rs",
-          classes: "social secondary"
+          classes: "social" + this.classModifier + " secondary"
         },
         {
           id: "anchor3",
