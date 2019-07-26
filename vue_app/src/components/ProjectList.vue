@@ -1,7 +1,7 @@
 <template>
-  <section id="projects">
+  <section class="projects">
     <h1>Projects</h1>
-    <div class="project-list-wrapper">
+    <div class="projects__list">
       <ProjectListing
         v-for="project in projects"
         :key="project.id"
@@ -55,6 +55,20 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
+.projects {
+  padding-top: 25px;
+
+  > h1 {
+    font-size: 0.1px;
+    color: transparent;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+  }
+}
 </style>
 
 
