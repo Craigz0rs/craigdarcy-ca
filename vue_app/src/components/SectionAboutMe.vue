@@ -1,5 +1,5 @@
 <template>
-  <section id="about-me" class="fadeIn trigger">
+  <section class="about-me fadeIn trigger">
     <h1>About me</h1>
     <p>Back in 2000 I built my first website when I was 10 years old. I signed up for Geocities and made one of those hideous old websites complete with a visitor counter and a guestbook. I titled it "Craig's Pokémon Website" and hot linked (sorry!) some Pokémon pictures from around the net. It was pretty much a vertical stack of pixelated 256-colour Pokémon pictures on a bright red background with lime green text. I thought it was pretty cool and I even got hundreds of visitors right up until my account was terminated for a "Terms of Service" violation because you needed to be 13 to use Geocities.</p>
     <p>It was a couple years later when I started experimenting with QBasic. At the time I had no resources other than my brother, so it didn't go much further than printing text to the console and changing its colour and size and designing icons for the executable files. I did get some resources from the library at one point which allowed me to make some simple games by copying the code right out of the book. I started to get ambitious and wanted to make real applications in Windows, so not knowing anything I downloaded some C++ IDE and thought I could just use Basic syntax and would create the next SimCity. No surprise that nothing would compile, it was very frustrating, there were no online resources like there are now so I wrote coding off as something only computer geniuses could do.</p>
@@ -16,4 +16,23 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.about-me {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 25px;
+  transition: 1s;
+
+  > h1 {
+    font-size: 40px;
+    color: #076697;
+    margin-bottom: 20px;
+  }
+
+  > p {
+    font-size: 1.2rem;
+    line-height: 30px;
+    margin-bottom: 20px;
+    font-weight: lighter;
+  }
+}
 </style>
