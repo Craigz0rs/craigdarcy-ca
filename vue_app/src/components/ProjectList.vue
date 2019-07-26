@@ -44,10 +44,18 @@ export default {
         {
           id: "project3",
           title: "Hangar 49",
-          imageSrc: "../assets/hangar49.jpg",
+          imageSrc: "@/assets/hangar49.jpg",
           imageAlt: "Hangar 49 Project",
           imageTitle: "JS Calculator Site Project",
           url: "http://www.craigdarcy.ca/hangar49/"
+        },
+        {
+          id: "project4",
+          title: "Glenwood Academy",
+          imageSrc: "",
+          imageAlt: "Glenwood Academy Project",
+          imageTitle: "Glenwood Academy Site Project",
+          url: "https://craigdarcy.ca/gacademy/"
         }
       ]
     };
