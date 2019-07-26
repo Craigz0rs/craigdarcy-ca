@@ -1,8 +1,10 @@
 <template>
   <div class="content">
     <TheContentTopper />
-    <SectionAboutMe />
-    <ProjectList />
+    <div class="content__wrap">
+      <SectionAboutMe />
+      <ProjectList />
+    </div>
   </div>
 </template>
 
@@ -26,5 +28,16 @@ export default {
   background-color: white;
   position: relative;
   z-index: 5;
+
+  &__wrap {
+   	position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    max-width: 1600px;
+    background-color: white;
+    z-index: 10; 
+  }
 }
 </style>
