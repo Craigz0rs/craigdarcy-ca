@@ -11,7 +11,7 @@ export default {
       type: String,
       default: "_blank"
     },
-    classes: String
+    classes: Array
   }
 };
 </script>
