@@ -28,20 +28,20 @@ export default {
           id: "1",
           href: "http://www.linkedin.com/in/craigdarcy",
           target: "_blank",
-          classes: "link--social fixed",
+          classes: ["link--social", "fixed"],
           icon: "<i class='fa fa-linkedin-square' aria-hidden='true'></i>"
         },
         {
           id: "2",
           href: "https://github.com/Craigz0rs",
           target: "_blank",
-          classes: "link--social fixed",
+          classes: ["link--social", "fixed"],
           icon: "<i class='fa fa-github-square' aria-hidden='true'></i>"
         },
         {
           id: "3",
           href: "mailto:hello@craigdarcy.ca",
-          classes: "link--social fixed",
+          classes: ["link--social", "fixed"],
           icon: "<i class='fa fa-envelope' aria-hidden='true'></i>"
         }
       ]
