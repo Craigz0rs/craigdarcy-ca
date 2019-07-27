@@ -1,6 +1,6 @@
 .DS_Store
 vue_app/node_modules
-/dist
+vue_app/dist
 
 # local env files
 .env.local
