@@ -1,15 +1,7 @@
 <template>
   <div class="content__topper">
     <div class="nav__wrap">
-      <ul>
-        <li v-for="button in buttons" :key="button.id">
-          <BaseButton
-            v-html="button.title"
-            :classes="button.classes"
-            @click.native="toggle($event)"
-          />
-        </li>
-      </ul>
+      <BaseNavigation />
       <SocialAnchorListing :ul-class="'--social'" />
       <!-- <li><button class="navbutton nav-active" @click="showProjects($event)" id="about-toggle">ABOUT ME</button></li>
       <li><button class="navbutton" @click="showProjects($event)" id="project-toggle">MY WORK</button></li>-->
@@ -24,13 +16,15 @@
 import BaseButton from "./BaseButton.vue";
 import BaseAnchor from "./BaseAnchor.vue";
 import SocialAnchorListing from "./SocialAnchorListing.vue";
+import BaseNavigation from "./BaseNavigation.vue";
 
 export default {
   name: "ContentTopper",
   components: {
     BaseButton,
     BaseAnchor,
-    SocialAnchorListing
+    SocialAnchorListing,
+    BaseNavigation
   },
   data() {
     return {

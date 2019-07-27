@@ -2,8 +2,9 @@
   <div class="content">
     <TheContentTopper />
     <div class="content__wrap">
-      <SectionAboutMe />
-      <ProjectList />
+      <router-view></router-view>
+      <!-- <SectionAboutMe />
+      <ProjectList /> -->
     </div>
   </div>
 </template>
