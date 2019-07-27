@@ -28,7 +28,7 @@ export default {
         {
           id: "project1",
           title: "HD Training",
-          imageSrc: "../assets/teamhd.jpg",
+          imageSrc: require("../assets/images/teamhd.jpg"),
           imageAlt: "HD Training Project",
           imageTitle: "HD Training Site Project",
           url: "https://hdtraining.maxrepmedia.com"
@@ -36,7 +36,7 @@ export default {
         {
           id: "project2",
           title: "JS Calculator",
-          imageSrc: "../assets/jscalc.png",
+          imageSrc: require("../assets/images/jscalc.png"),
           imageAlt: "JS Calculator Project",
           imageTitle: "JS Calculator App Project",
           url: "https://craigdarcy.ca/jscalculator/"
@@ -44,7 +44,7 @@ export default {
         {
           id: "project3",
           title: "Hangar 49",
-          imageSrc: "@/assets/hangar49.jpg",
+          imageSrc: require("../assets/images/hangar49.jpg"),
           imageAlt: "Hangar 49 Project",
           imageTitle: "JS Calculator Site Project",
           url: "http://www.craigdarcy.ca/hangar49/"
@@ -52,7 +52,7 @@ export default {
         {
           id: "project4",
           title: "Glenwood Academy",
-          imageSrc: "",
+          imageSrc: require("../assets/images/hangar49.jpg"),
           imageAlt: "Glenwood Academy Project",
           imageTitle: "Glenwood Academy Site Project",
           url: "https://craigdarcy.ca/gacademy/"
