@@ -1,5 +1,9 @@
 <template>
-  <a :href="href" :target="target" :class="classes"></a>
+  <a
+    :class="classes"
+    :href="href"
+    :target="target"
+  ></a>
 </template>
 
 <script>
