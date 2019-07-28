@@ -1,26 +1,17 @@
 <template>
-  <nav class="nav">
-    <ul>
-      <li :key="link.id" v-for="link in links">
-        <AnchorInternal
-          :class="link.classes"
-          v-html="link.title"
-          :href="link.href"
-          :target="link.target"
-        />
+  <nav class="nav nav--main">
+    <ul class="nav__list">
+      <li class="nav__item" :key="link.id" v-for="link in links">
+        <router-link :to="link.href" :class="link.classes" v-html="link.title" />
       </li>
     </ul>
   </nav>
 </template>
 
 <script>
-import AnchorInternal from "./AnchorInternal.vue";
 
 export default {
   name: "BaseNavigation",
-  components: {
-    AnchorInternal
-  },
   data() {
     return {
       links: [
@@ -28,17 +19,13 @@ export default {
           id: "button1",
           title: "ABOUT ME",
           href: "/",
-          classes: ["nav__link", "nav-active"],
-          target: "",
-          isActive: true
+          classes: ["nav__link", "nav-active"]
         },
         {
           id: "button2",
           title: "MY WORK",
           href: "/projects",
-          classes: ["nav__link"],
-          target: "",
-          isActive: false
+          classes: ["nav__link"]
         }
       ]
     };
@@ -48,31 +35,34 @@ export default {
 
 <style lang="scss">
 .nav {
-  
   &__link {
     display: block;
     position: relative;
     bottom: -6px;
-    border: 2px solid white;
+    width: 180px;
+    margin: 0 26px 0 33px;
+    padding: 12px 0;
     background: transparent;
-    color: white;
+    border: 2px solid $secondary;
+    border-radius: 8px;
+    color: $secondary;
     font-size: 20px;
     text-align: center;
     text-decoration: none;
-    margin: 0 26px 0 33px;
-    padding: 12px 0;
-    width: 180px;
-    border-radius: 8px;
     cursor: pointer;
     transition: 0.2s;
-    outline: 0;
+
+    &:hover, &:active {
+      background: rgba(255,255,255,0.2);
+      transition: 0.2s;
+    }
   }
 
   .router-link-exact-active {
-      background-color: white;
-      color: #076697;
-      transition: 0.2s;
-      outline: 0;
+    background-color: $secondary;
+    color: $primary;
+    transition: 0.2s;
+    outline: 0;
   }
 }
 </style>
