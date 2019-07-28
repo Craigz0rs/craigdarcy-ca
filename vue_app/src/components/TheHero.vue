@@ -1,7 +1,7 @@
 <template>
   <div class="hero">
     <div class="hero__intro">
-      <img src="../assets/images/signature.svg" alt="Craig D'Arcy" />
+      <img class="hero__logo" src="../assets/images/signature.svg" alt="Craig D'Arcy" />
       <h1>Craig D'Arcy</h1>
       <h2>Designer and Front-End Developer</h2>
     </div>
@@ -18,10 +18,14 @@ export default {
 .hero {
   min-height: 530px;
   max-height: 1024px;
-  background-color: #076697;
+  background-color: $primary;
   margin: 0 auto;
   position: relative;
   z-index: 1;
+
+  @media only screen and (max-width: 499px) {
+		min-height: 390px;
+	}
 
   &__intro {
     max-width: 700px;
@@ -29,7 +33,7 @@ export default {
     padding-top: 75px;
     text-align: center;
     line-height: 75px;
-    color: white;
+    color: $white;
     position: relative;
     z-index: 2;
 
@@ -47,6 +51,46 @@ export default {
       margin-top: -50px;
       font-size: 1.9em;
       font-weight: 200;
+    }
+
+    @media only screen and (max-width: 1045px) {
+      margin-right: 30px;
+    }
+
+    @media only screen and (max-width: 759px) {
+      text-align: center;
+      color: white;
+      line-height: 55px;
+      margin: 0 auto;
+      padding: 75px 30px;
+
+      > h2 {
+        font-size: 1.8em;
+      }
+    }
+
+    @media only screen and (max-width: 649px) {
+      > h2 {
+        font-size: 1.5em;
+      }
+    }
+
+    @media only screen and (max-width: 549px) {
+      > h2 {
+        font-size: 1.3em;
+        margin-top: -14px;
+        line-height: 20px;
+        padding: 0 25px;
+      }
+    }
+
+    @media only screen and (max-width: 499px) {
+      padding: 100px 17px;
+    }
+    @media only screen and (max-width: 399px) {
+      > h2 {
+        font-size: 1.1em;
+      }
     }
   }
 }

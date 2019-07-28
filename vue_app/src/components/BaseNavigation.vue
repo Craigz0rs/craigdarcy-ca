@@ -9,7 +9,6 @@
 </template>
 
 <script>
-
 export default {
   name: "BaseNavigation",
   data() {
@@ -57,8 +56,17 @@ export default {
     cursor: pointer;
     transition: 0.2s;
 
-    &:hover, &:active {
-      background: rgba(255,255,255,0.2);
+    @media screen and (max-width: 499px) {
+      bottom: -18px;
+      font-size: 16px;
+      margin: 0 0px 0 26px;
+      padding: 7px 0;
+      width: 130px;
+    }
+
+    &:hover,
+    &:active {
+      background: rgba(255, 255, 255, 0.2);
       transition: 0.2s;
     }
   }
