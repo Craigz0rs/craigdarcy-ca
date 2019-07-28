@@ -1,7 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import SectionAboutMe from "@/components/SectionAboutMe";
-import FukkYah from "@/components/FukkYah";
 import ProjectList from "@/components/ProjectList";
 
 Vue.use(VueRouter);
