@@ -19,7 +19,7 @@ export default {
           id: "button1",
           title: "ABOUT ME",
           href: "/",
-          classes: ["nav__link", "nav-active"]
+          classes: ["nav__link"]
         },
         {
           id: "button2",
@@ -35,6 +35,11 @@ export default {
 
 <style lang="scss">
 .nav {
+  &__list {
+    display: flex;
+    justify-content: right;
+  }
+
   &__link {
     display: block;
     position: relative;

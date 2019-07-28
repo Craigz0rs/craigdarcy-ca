@@ -2,7 +2,7 @@
   <div class="content__topper">
     <div class="nav__wrap">
       <BaseNavigation />
-      <SocialAnchorListing :ul-class="'--social'" />
+      <ListingSocialLinks :ulClass="'social__list--nav'"/>
       <!-- <li><button class="navbutton nav-active" @click="showProjects($event)" id="about-toggle">ABOUT ME</button></li>
       <li><button class="navbutton" @click="showProjects($event)" id="project-toggle">MY WORK</button></li>-->
       <!-- <li><a target="_blank" href="http://www.linkedin.com/in/craigdarcy" class="social secondary"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
@@ -13,17 +13,13 @@
 </template>
 
 <script>
-import BaseButton from "./BaseButton.vue";
-import BaseAnchor from "./BaseAnchor.vue";
-import SocialAnchorListing from "./SocialAnchorListing.vue";
+import ListingSocialLinks from "./ListingSocialLinks.vue";
 import BaseNavigation from "./BaseNavigation.vue";
 
 export default {
   name: "ContentTopper",
   components: {
-    BaseButton,
-    BaseAnchor,
-    SocialAnchorListing,
+    ListingSocialLinks,
     BaseNavigation
   },
   data() {
@@ -44,20 +40,6 @@ export default {
       ]
     };
   },
-  methods: {
-    toggle(event) {
-      console.log(event);
-      this.toggleButtonActive(event);
-    },
-    toggleButtonActive() {
-      this.isActive = !this.isActive;
-      console.log(this);
-      // if(this.classes.includes("nav-active")) {
-      //   let i = this.classes.indexOf(this.classes.includes("nav-active"));
-
-      // }
-    }
-  }
 };
 </script>
 
@@ -80,8 +62,8 @@ export default {
   right: 104vw;
 
   ul {
-    display: flex;
-    justify-content: right;
+    // display: flex;
+    // justify-content: right;
   }
 }
 </style>
