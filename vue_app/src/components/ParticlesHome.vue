@@ -30,13 +30,13 @@
 </template>
 <script>
 import BaseParticles from "./BaseParticles.vue";
-import particlesData from "@/assets/json/data.json";
+import siteData from "@/assets/json/data.json";
 export default {
   name: "ParticlesHome",
   components: {
     BaseParticles
   },
-  particles: particlesData.particles.home
+  particles: siteData.particles.home
 };
 </script>
 <style lang="scss">

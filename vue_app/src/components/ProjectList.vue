@@ -3,7 +3,7 @@
     <h1>Projects</h1>
     <div class="projects__list">
       <ProjectListing
-        v-for="project in projects"
+        v-for="project in $options.projects"
         :key="project.id"
         :title="project.title"
         :image-src="project.imageSrc"
@@ -16,50 +16,14 @@
 </template>
 <script>
 import ProjectListing from "./ProjectListing.vue";
+import siteData from "@/assets/json/data.json";
 
 export default {
   name: "ProjectList",
   components: {
     ProjectListing
   },
-  data: function() {
-    return {
-      projects: [
-        {
-          id: "project1",
-          title: "HD Training",
-          imageSrc: require("../assets/images/teamhd.jpg"),
-          imageAlt: "HD Training Project",
-          imageTitle: "HD Training Site Project",
-          url: "https://hdtraining.maxrepmedia.com"
-        },
-        {
-          id: "project2",
-          title: "JS Calculator",
-          imageSrc: require("../assets/images/jscalc.png"),
-          imageAlt: "JS Calculator Project",
-          imageTitle: "JS Calculator App Project",
-          url: "https://craigdarcy.ca/jscalculator/"
-        },
-        {
-          id: "project3",
-          title: "Hangar 49",
-          imageSrc: require("../assets/images/hangar49.jpg"),
-          imageAlt: "Hangar 49 Project",
-          imageTitle: "JS Calculator Site Project",
-          url: "http://www.craigdarcy.ca/hangar49/"
-        },
-        {
-          id: "project4",
-          title: "Glenwood Academy",
-          imageSrc: require("../assets/images/hangar49.jpg"),
-          imageAlt: "Glenwood Academy Project",
-          imageTitle: "Glenwood Academy Site Project",
-          url: "https://craigdarcy.ca/gacademy/"
-        }
-      ]
-    };
-  }
+  projects: siteData.projects
 };
 </script>
 <style lang="scss" scoped>
