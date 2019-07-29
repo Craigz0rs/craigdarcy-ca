@@ -10,6 +10,8 @@
         :image-alt="project.imageAlt"
         :image-title="project.imageTitle"
         :url="project.url"
+        :projectStyles="project.styles"
+        :projectSpecs="project.projectSpecs"
       />
     </div>
   </section>

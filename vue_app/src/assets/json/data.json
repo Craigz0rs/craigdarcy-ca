@@ -69,7 +69,13 @@
           "imageSrc": "teamhd.jpg",
           "imageAlt": "HD Training Project",
           "imageTitle": "HD Training Site Project",
-          "url": "https://hdtraining.maxrepmedia.com"
+          "url": "https://hdtraining.maxrepmedia.com",
+          "projectSpecs": "<i class='fab fa-vuejs'></i>",
+          "styles": {
+            "background": "rgb(243, 219, 67)",
+            "color": "black",
+            "mix-blend-mode": "lighten"
+          }
         },
         {
           "id": "project2",

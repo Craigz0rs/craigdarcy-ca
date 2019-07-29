@@ -1,7 +1,12 @@
 <template>
   <article class="project fadeInLeft trigger">
     <h1 class="project__title">{{ title }}</h1>
-    <div class="project__overlay"></div>
+    <div class="project__overlay project__overlay--main"></div>
+    <div
+      v-html="projectSpecs"
+      class="project__overlay project__overlay--bottom"
+      :style="projectStyles"
+    ></div>
     <img
       class="project__image"
       :src="imageSrcComputed"
@@ -22,7 +27,9 @@ export default {
     imageSrc: String,
     imageAlt: String,
     imageTitle: String,
-    url: String
+    url: String,
+    projectStyles: Object,
+    projectSpecs: String
   },
   computed: {
     imageSrcComputed() {
@@ -40,11 +47,56 @@ export default {
   overflow: hidden;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
 
+  &__overlay {
+    position: absolute;
+
+    &--main {
+      top: -50%;
+      left: -25%;
+      height: 200%;
+      width: 0%;
+      transform: rotate(-24deg);
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 2;
+      transition: 0.2s;
+    }
+
+    &--bottom {
+      bottom: -40%;
+      left: -10%;
+      height: 40%;
+      width: 120%;
+      background: rgba(255, 255, 255, 0.8);
+      transform: rotate(0deg);
+      transform-origin: top left;
+      z-index: 3;
+      transition: 0.2s ease-in-out;
+    }
+  }
+
   &:hover,
   &:focus {
+    .project {
+      &__overlay {
+        &--main {
+          width: 100%;
+          transition: 0.2s;
+        }
+
+        &--bottom {
+          bottom: -32%;
+          box-shadow: 0 -13px 27px -5px rgba(50, 50, 93, 0.25),
+            0 -8px 16px -8px rgba(0, 0, 0, 0.3),
+            0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+          transform: rotate(-7deg);
+          transition: 0.2s ease-in-out;
+        }
+      }
+    }
+
     .project__title {
       transition: 0.2s;
-      color: white;
+      color: $white;
       z-index: 3;
     }
 
@@ -60,13 +112,13 @@ export default {
     }
 
     .project__overlay {
-      transform: translateX(14%) rotate(-17deg);
-      transition: 0.2s;
+      // transform: translateX(14%) rotate(-17deg);
+      // transition: 0.2s;
     }
 
     .project__link > a {
-      color: white;
-      border: 2px solid white;
+      color: $white;
+      border: 2px solid $white;
       transition: 0.1s;
     }
   }
