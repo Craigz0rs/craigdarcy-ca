@@ -1,5 +1,6 @@
 <template>
   <div class="hero">
+    <ParticlesHome />
     <div class="hero__intro">
       <img class="hero__logo" src="../assets/images/signature.svg" alt="Craig D'Arcy" />
       <h1>Craig D'Arcy</h1>
@@ -9,8 +10,12 @@
 </template>
 
 <script>
+import ParticlesHome from "./ParticlesHome.vue";
 export default {
-  name: "TheHero"
+  name: "TheHero",
+  components: {
+    ParticlesHome
+  }
 };
 </script>
 
@@ -24,8 +29,8 @@ export default {
   z-index: 1;
 
   @media only screen and (max-width: 499px) {
-		min-height: 390px;
-	}
+    min-height: 390px;
+  }
 
   &__intro {
     max-width: 700px;

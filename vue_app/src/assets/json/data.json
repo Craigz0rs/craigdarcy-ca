@@ -1,0 +1,64 @@
+{
+    "particles": {
+        "home": [{
+                "key": "particle__home--large",
+                "color": "#fff",
+                "particleOpacity": 0.04,
+                "particlesNumber": 10,
+                "shapeType": "edge",
+                "particleSize": 72,
+                "linesColor": "#fff",
+                "linesWidth": 1,
+                "lineLinked": false,
+                "lineOpacity": 0.4,
+                "linesDistance": 150,
+                "moveSpeed": 1.6,
+                "hoverEffect": true,
+                "hoverMode": "bubble",
+                "clickEffect": false,
+                "clickMode": "push",
+                "modeSize": 56,
+                "modeDuration": 7.5,
+                "modeOpacity": 0.1,
+                "modeDistance": 400,
+                "modeSpeed": 3
+            },
+            {
+                "key": "particle__home--medium",
+                "color": "#fff",
+                "particleOpacity": 0.08,
+                "particlesNumber": 35,
+                "shapeType": "edge",
+                "particleSize": 12,
+                "linesColor": "#fff",
+                "linesWidth": 1,
+                "lineLinked": false,
+                "lineOpacity": 0.4,
+                "linesDistance": 150,
+                "moveSpeed": 1.1,
+                "moveDirection": "right",
+                "hoverEffect": false,
+                "clickEffect": true,
+                "clickMode": "push"
+            },
+            {
+                "key": "particle__home--small",
+                "color": "#fff",
+                "particleOpacity": 0.5,
+                "particlesNumber": 8,
+                "shapeType": "edge",
+                "particleSize": 6,
+                "linesColor": "#fff",
+                "linesWidth": 1,
+                "lineLinked": false,
+                "lineOpacity": 0.4,
+                "linesDistance": 150,
+                "moveSpeed": 3.2,
+                "moveDirection": "right",
+                "hoverEffect": false,
+                "clickEffect": true,
+                "clickMode": "push"
+            }
+        ]
+    }
+}
