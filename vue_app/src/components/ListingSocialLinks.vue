@@ -1,11 +1,8 @@
 <template>
   <ul :class="`social__list ${ulClass}`">
     <li class="social__listing" v-for="link in anchors" :key="link.id">
-      <a
-        v-html="link.title"
-        :href="link.href"
-        :class="link.classes"
-        target="_blank"
+      <a :href="link.href" :class="link.classes" target="_blank"
+        ><font-awesome-icon :icon="link.title"></font-awesome-icon
       ></a>
     </li>
   </ul>
@@ -26,7 +23,7 @@ export default {
       anchors: [
         {
           id: "anchor1",
-          title: "<i aria-hidden='true' class='fa fa-linkedin-square'></i>",
+          title: "coffee",
           href: "http://www.linkedin.com/in/craigdarcy",
           classes: socialClasses
         },
@@ -44,6 +41,11 @@ export default {
         }
       ]
     };
+  },
+  computed: {
+    // icon() {
+    //   return `<font-awesome-icon icon="${this.title}"></font-awesome-icon>`
+    // }
   }
 };
 </script>
