@@ -2,7 +2,7 @@
   <div class="content__topper">
     <div class="nav__wrap">
       <BaseNavigation />
-      <ListingSocialLinks :ulClass="'social__list--nav'"/>
+      <ListingSocialLinks :ulClass="'social__list--nav'" />
       <!-- <li><button class="navbutton nav-active" @click="showProjects($event)" id="about-toggle">ABOUT ME</button></li>
       <li><button class="navbutton" @click="showProjects($event)" id="project-toggle">MY WORK</button></li>-->
       <!-- <li><a target="_blank" href="http://www.linkedin.com/in/craigdarcy" class="social secondary"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
@@ -39,7 +39,7 @@ export default {
         }
       ]
     };
-  },
+  }
 };
 </script>
 

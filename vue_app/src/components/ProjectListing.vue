@@ -2,7 +2,12 @@
   <article class="project fadeInLeft trigger">
     <h1 class="project__title">{{ title }}</h1>
     <div class="project__overlay"></div>
-    <img class="project__image" :src="imageSrcComputed" :alt="imageAlt" :title="imageTitle" />
+    <img
+      class="project__image"
+      :src="imageSrcComputed"
+      :alt="imageAlt"
+      :title="imageTitle"
+    />
     <a target="_blank" :href="url" class="project__link-overlay"></a>
     <div class="project__link">
       <a target="_blank" :href="url">View Site</a>
@@ -21,7 +26,7 @@ export default {
   },
   computed: {
     imageSrcComputed() {
-      return require(`@/assets/images/${this.imageSrc}`)
+      return require(`@/assets/images/${this.imageSrc}`);
     }
   }
 };

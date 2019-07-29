@@ -1,7 +1,12 @@
 <template>
   <ul :class="`social__list ${ulClass}`">
     <li class="social__listing" v-for="link in anchors" :key="link.id">
-      <a v-html="link.title" :href="link.href" :class="link.classes" target="_blank"></a>
+      <a
+        v-html="link.title"
+        :href="link.href"
+        :class="link.classes"
+        target="_blank"
+      ></a>
     </li>
   </ul>
 </template>
@@ -45,15 +50,15 @@ export default {
 <style lang="scss">
 .social {
   &__link {
-      display: block;
-      position: relative;
-      bottom: 0px;
-      font-size: 3.5em;
-      padding: 5px 15px;
-      margin: 10px 10px;
-      color: $white;
-      text-decoration: none;
-      transition: 0.3s ease;
+    display: block;
+    position: relative;
+    bottom: 0px;
+    font-size: 3.5em;
+    padding: 5px 15px;
+    margin: 10px 10px;
+    color: $white;
+    text-decoration: none;
+    transition: 0.3s ease;
   }
 
   &__list {

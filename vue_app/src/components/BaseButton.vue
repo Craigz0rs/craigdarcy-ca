@@ -7,7 +7,7 @@ export default {
   name: "BaseButton",
   props: {
     classes: Array
-  },
+  }
 };
 </script>
 

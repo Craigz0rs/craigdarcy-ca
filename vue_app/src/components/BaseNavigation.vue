@@ -2,7 +2,11 @@
   <nav class="nav nav--main">
     <ul class="nav__list">
       <li class="nav__item" :key="link.id" v-for="link in links">
-        <router-link :to="link.href" :class="link.classes" v-html="link.title" />
+        <router-link
+          :to="link.href"
+          :class="link.classes"
+          v-html="link.title"
+        />
       </li>
     </ul>
   </nav>
