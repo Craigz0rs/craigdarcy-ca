@@ -12,12 +12,14 @@
         :url="project.url"
         :projectStyles="project.styles"
         :projectSpecs="project.projectSpecs"
+        :projectTools="project.projectTools"
       />
     </div>
   </section>
 </template>
 <script>
 import ProjectListing from "./ProjectListing.vue";
+
 import siteData from "@/assets/json/data.json";
 
 export default {

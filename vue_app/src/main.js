@@ -7,8 +7,8 @@ import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelopeSquare } from "@fortawesome/free-solid-svg-icons";
 import { faGithubSquare } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
-
-library.add(faLinkedin, faGithubSquare, faEnvelopeSquare);
+import { faVuejs } from "@fortawesome/free-brands-svg-icons";
+library.add(faVuejs, faLinkedin, faGithubSquare, faEnvelopeSquare);
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 

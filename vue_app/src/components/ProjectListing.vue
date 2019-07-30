@@ -3,10 +3,17 @@
     <h1 class="project__title">{{ title }}</h1>
     <div class="project__overlay project__overlay--main"></div>
     <div
-      v-html="projectSpecs"
       class="project__overlay project__overlay--bottom"
       :style="projectStyles"
-    ></div>
+    >
+      <ul class="project__tools">
+        <li class="project__tool" v-for="tool in projectTools" :key="tool.id">
+          <font-awesome-icon
+            :icon="[tool.prefix, tool.name]"
+          ></font-awesome-icon>
+        </li>
+      </ul>
+    </div>
     <img
       class="project__image"
       :src="imageSrcComputed"
@@ -29,7 +36,8 @@ export default {
     imageTitle: String,
     url: String,
     projectStyles: Object,
-    projectSpecs: String
+    projectSpecs: String,
+    projectTools: Object
   },
   computed: {
     imageSrcComputed() {
