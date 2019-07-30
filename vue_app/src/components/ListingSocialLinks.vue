@@ -1,9 +1,9 @@
 <template>
   <ul :class="`social__list ${ulClass}`">
     <li class="social__listing" v-for="link in anchors" :key="link.id">
-      <a :href="link.href" :class="link.classes" target="_blank"
-        ><font-awesome-icon :icon="link.title"></font-awesome-icon
-      ></a>
+      <a :href="link.href" :class="link.classes" target="_blank">
+        <font-awesome-icon :icon="[link.iconPref, link.icon]"></font-awesome-icon>
+      </a>
     </li>
   </ul>
 </template>
@@ -23,20 +23,26 @@ export default {
       anchors: [
         {
           id: "anchor1",
-          title: "coffee",
+          title: "",
+          icon: "linkedin",
+          iconPref: "fab",
           href: "http://www.linkedin.com/in/craigdarcy",
           classes: socialClasses
         },
         {
           id: "anchor2",
-          title: "<i class='fa fa-github-square' aria-hidden='true'></i>",
+          title: "",
+          icon: "github-square",
+          iconPref: "fab",
           href: "https://github.com/Craigz0rs",
           classes: socialClasses
         },
         {
           id: "anchor3",
-          title: "<i class='fa fa-envelope' aria-hidden='true'></i>",
           href: "mailto:hello@craigdarcy.ca",
+          title: "",
+          icon: "envelope-square",
+          iconPref: "fa",
           classes: socialClasses + " social__link--email"
         }
       ]
