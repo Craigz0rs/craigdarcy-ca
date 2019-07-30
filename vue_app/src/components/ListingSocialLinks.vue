@@ -2,7 +2,9 @@
   <ul :class="`social__list ${ulClass}`">
     <li class="social__listing" v-for="link in anchors" :key="link.id">
       <a :href="link.href" :class="link.classes" target="_blank">
-        <font-awesome-icon :icon="[link.iconPref, link.icon]"></font-awesome-icon>
+        <font-awesome-icon
+          :icon="[link.iconPref, link.icon]"
+        ></font-awesome-icon>
       </a>
     </li>
   </ul>
