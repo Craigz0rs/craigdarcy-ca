@@ -50,11 +50,6 @@ export default {
       ]
     };
   },
-  computed: {
-    // icon() {
-    //   return `<font-awesome-icon icon="${this.title}"></font-awesome-icon>`
-    // }
-  }
 };
 </script>
 <style lang="scss">
@@ -78,10 +73,6 @@ export default {
     &--nav {
       .social__link {
         bottom: calc(3.5rem - 50%);
-
-        &--email {
-          bottom: calc(3.5rem - 47%);
-        }
       }
 
       @media screen and (max-width: 759px) {

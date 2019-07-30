@@ -64,19 +64,29 @@
   },
   "projects": [
     {
-      "id": "project1",
-      "title": "HD Training",
-      "imageSrc": "teamhd.jpg",
-      "imageAlt": "HD Training Project",
-      "imageTitle": "HD Training Site Project",
-      "url": "https://hdtraining.maxrepmedia.com",
-      "projectSpecs": "<i class='fab fa-vuejs'></i>",
+      "id": "project0",
+      "title": "Portfolio",
+      "imageSrc": "portfolio.jpg",
+      "imageAlt": "Portfolio Project",
+      "imageTitle": "Portfolio Site Project",
+      "url": "https://craigdarcy.ca",
       "styles": {
-        "background": "rgb(243, 219, 67)",
+        "background": "rgb(255, 255, 255)",
         "color": "black",
         "mix-blend-mode": "lighten"
       },
       "projectTools": [
+        
+        {
+          "prefix": "fab",
+          "name": "js",
+          "id": 2
+        },
+        {
+          "prefix": "fab",
+          "name": "sass",
+          "id": 3
+        },
         {
           "prefix": "fab",
           "name": "vuejs",
@@ -85,12 +95,69 @@
       ]
     },
     {
+      "id": "project1",
+      "title": "HD Training",
+      "imageSrc": "teamhd.jpg",
+      "imageAlt": "HD Training Project",
+      "imageTitle": "HD Training Site Project",
+      "url": "https://hdtraining.maxrepmedia.com",
+      "styles": {
+        "background": "rgb(243, 219, 67)",
+        "color": "black",
+        "mix-blend-mode": "lighten"
+      },
+      "projectTools": {
+        "faIcons": [
+          {
+            "prefix": "fab",
+            "name": "php",
+            "id": 2
+          },
+          {
+            "prefix": "fab",
+            "name": "sass",
+            "id": 3
+          },
+          {
+            "prefix": "fab",
+            "name": "wordpress",
+            "id": 1
+          }
+        ],
+        "svg": [
+          
+        ]
+      }
+    },
+    {
       "id": "project2",
       "title": "JS Calculator",
       "imageSrc": "jscalc.png",
       "imageAlt": "JS Calculator Project",
       "imageTitle": "JS Calculator App Project",
-      "url": "https://craigdarcy.ca/jscalculator/"
+      "url": "https://craigdarcy.ca/jscalculator/",
+      "styles": {
+        "background": "rgb(124, 255, 235)",
+        "color": "black",
+        "mix-blend-mode": "lighten"
+      },
+      "projectTools": [
+        {
+          "prefix": "fab",
+          "name": "js",
+          "id": 1
+        },
+        {
+          "prefix": "fab",
+          "name": "css3",
+          "id": 2
+        },
+        {
+          "prefix": "fab",
+          "name": "html5",
+          "id": 3
+        }
+      ]
     },
     {
       "id": "project3",
@@ -98,7 +165,29 @@
       "imageSrc": "hangar49.jpg",
       "imageAlt": "Hangar 49 Project",
       "imageTitle": "JS Calculator Site Project",
-      "url": "http://www.craigdarcy.ca/hangar49/"
+      "url": "http://www.craigdarcy.ca/hangar49/",
+      "styles": {
+        "background": "rgb(243, 219, 67)",
+        "color": "black",
+        "mix-blend-mode": "lighten"
+      },
+      "projectTools": [
+        {
+          "prefix": "fab",
+          "name": "wordpress",
+          "id": 1
+        },
+        {
+          "prefix": "fab",
+          "name": "php",
+          "id": 2
+        },
+        {
+          "prefix": "fab",
+          "name": "sass",
+          "id": 3
+        }
+      ]
     },
     {
       "id": "project4",
@@ -106,7 +195,29 @@
       "imageSrc": "hangar49.jpg",
       "imageAlt": "Glenwood Academy Project",
       "imageTitle": "Glenwood Academy Site Project",
-      "url": "https://craigdarcy.ca/gacademy/"
+      "url": "https://craigdarcy.ca/gacademy/",
+      "styles": {
+        "background": "rgb(243, 219, 67)",
+        "color": "black",
+        "mix-blend-mode": "lighten"
+      },
+      "projectTools": [
+        {
+          "prefix": "fab",
+          "name": "php",
+          "id": 1
+        },
+        {
+          "prefix": "fab",
+          "name": "sass",
+          "id": 2
+        },
+        {
+          "prefix": "fab",
+          "name": "wordpress",
+          "id": 3
+        }
+      ]
     }
   ]
 }

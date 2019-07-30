@@ -7,9 +7,14 @@
       :style="projectStyles"
     >
       <ul class="project__tools">
-        <li class="project__tool" v-for="tool in projectTools" :key="tool.id">
+        <li
+          class="project__tool"
+          v-for="tool in projectTools.faIcons"
+          :key="tool.id"
+        >
           <font-awesome-icon
             :icon="[tool.prefix, tool.name]"
+            class="project__icon"
           ></font-awesome-icon>
         </li>
       </ul>
@@ -27,6 +32,18 @@
   </article>
 </template>
 <script>
+import {
+  faVuejs,
+  faJs,
+  faWordpress,
+  faCss3,
+  faHtml5,
+  faSass,
+  faPhp
+} from "@fortawesome/free-brands-svg-icons";
+import { library } from "@fortawesome/fontawesome-svg-core";
+library.add(faVuejs, faJs, faWordpress, faCss3, faHtml5, faSass, faPhp);
+
 export default {
   name: "ProjectListing",
   props: {
@@ -37,7 +54,7 @@ export default {
     url: String,
     projectStyles: Object,
     projectSpecs: String,
-    projectTools: Object
+    projectTools: Array
   },
   computed: {
     imageSrcComputed() {
@@ -54,6 +71,23 @@ export default {
   margin: 0 25px 50px;
   overflow: hidden;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+
+  @media screen and (max-width: 1023px) {
+    width: calc(100% - 50px);
+    margin: 0 50px 50px;
+    height: 500px;
+  }
+
+  @media screen and (max-width: 799px) {
+    margin: 0 25px 40px;
+    height: 400px;
+  }
+
+  @media screen and (max-width: 500px) {
+    width: calc(100vw - 30px);
+    margin: 0 15px 30px;
+    height: calc(100vw - 60px);
+  }
 
   &__overlay {
     position: absolute;
@@ -111,6 +145,10 @@ export default {
     .project__link {
       display: block;
       z-index: 11;
+
+      @media screen and (max-width: 650px) {
+        left: calc(50% - 90px);
+      }
     }
 
     .project__image {
@@ -139,6 +177,17 @@ export default {
     color: transparent;
     font-size: 3em;
     font-weight: 100;
+
+    @media screen and (max-width: 500px) {
+      left: 0;
+      width: 100%;
+      padding: 0 50px;
+    }
+
+    @media screen and (max-width: 400px) {
+      font-size: 2.6em;
+      padding: 0 25px;
+    }
   }
 
   &__image {
@@ -186,6 +235,24 @@ export default {
         background-color: rgba(255, 255, 255, 0.2);
         transition: 0.2s;
       }
+    }
+  }
+
+  &__tools {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 15%;
+  }
+
+  &__tool {
+    margin: 0.75rem 0.75rem;
+    height: 75px;
+    width: 75px;
+
+    > svg {
+      display: block;
+      height: 100%;
+      width: 100% !important;
     }
   }
 }
