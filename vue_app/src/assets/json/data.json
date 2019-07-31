@@ -1,7 +1,6 @@
 {
   "particles": {
-    "home": [
-      {
+    "home": [{
         "key": "particle__home--large",
         "color": "#fff",
         "particleOpacity": 0.04,
@@ -62,8 +61,7 @@
       }
     ]
   },
-  "projects": [
-    {
+  "projects": [{
       "id": "project0",
       "title": "Portfolio",
       "imageSrc": "portfolio.jpg",
@@ -76,16 +74,19 @@
         "mix-blend-mode": "lighten"
       },
       "projectTools": [
-        
         {
-          "prefix": "fab",
-          "name": "js",
-          "id": 2
+          "id": 2,
+          "name": "gridsome"
         },
         {
           "prefix": "fab",
           "name": "sass",
           "id": 3
+        },
+        {
+          "prefix": "fab",
+          "name": "js",
+          "id": 4
         },
         {
           "prefix": "fab",
@@ -106,28 +107,23 @@
         "color": "black",
         "mix-blend-mode": "lighten"
       },
-      "projectTools": {
-        "faIcons": [
-          {
-            "prefix": "fab",
-            "name": "php",
-            "id": 2
-          },
-          {
-            "prefix": "fab",
-            "name": "sass",
-            "id": 3
-          },
-          {
-            "prefix": "fab",
-            "name": "wordpress",
-            "id": 1
-          }
-        ],
-        "svg": [
-          
-        ]
-      }
+      "projectTools": [
+        {
+          "prefix": "fab",
+          "name": "php",
+          "id": 2
+        },
+        {
+          "prefix": "fab",
+          "name": "sass",
+          "id": 3
+        },
+        {
+          "prefix": "fab",
+          "name": "wordpress",
+          "id": 1
+        }
+      ]
     },
     {
       "id": "project2",
@@ -141,8 +137,7 @@
         "color": "black",
         "mix-blend-mode": "lighten"
       },
-      "projectTools": [
-        {
+      "projectTools": [{
           "prefix": "fab",
           "name": "js",
           "id": 1
@@ -171,8 +166,7 @@
         "color": "black",
         "mix-blend-mode": "lighten"
       },
-      "projectTools": [
-        {
+      "projectTools": [{
           "prefix": "fab",
           "name": "wordpress",
           "id": 1
@@ -201,8 +195,7 @@
         "color": "black",
         "mix-blend-mode": "lighten"
       },
-      "projectTools": [
-        {
+      "projectTools": [{
           "prefix": "fab",
           "name": "php",
           "id": 1

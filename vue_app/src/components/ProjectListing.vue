@@ -15,14 +15,23 @@
         <ul class="project__tools">
           <li
             class="project__tool"
-            v-for="tool in projectTools.faIcons"
+            v-for="tool in projectToolsOrdered"
             :key="tool.id"
-            v-html="poopy"
           >
-            <!-- <font-awesome-icon
-              :icon="[tool.prefix, tool.name]"
-              class="project__icon"
-            ></font-awesome-icon> -->
+            <div
+              class="project__svg-wrap project__svg-wrap--external"
+              v-if="!tool.prefix"
+              v-html="externalSvg(tool.name)"
+            >
+              <span class="screenreader__text">{{ tool.name }}</span>
+            </div>
+            <div class="project__svg-wrap" v-if="tool.prefix">
+              <font-awesome-icon
+                :icon="[tool.prefix, tool.name]"
+                class="project__icon"
+              ></font-awesome-icon>
+              <span class="screenreader__text">{{ tool.name }}</span>
+            </div>
           </li>
         </ul>
       </div>
@@ -39,7 +48,11 @@
   </article>
 </template>
 <script>
-import poopy from '!raw-loader!@/assets/images/gridsome.svg';
+import gridsome from "!raw-loader!@/assets/images/icons/gridsome.svg";
+
+const externalIcons = {
+  gridsome: gridsome
+};
 
 import {
   faVuejs,
@@ -55,11 +68,6 @@ library.add(faVuejs, faJs, faWordpress, faCss3, faHtml5, faSass, faPhp);
 
 export default {
   name: "ProjectListing",
-  data() {
-    return {
-      poopy
-    }
-  },
   props: {
     title: String,
     imageSrc: String,
@@ -73,6 +81,20 @@ export default {
   computed: {
     imageSrcComputed() {
       return require(`@/assets/images/${this.imageSrc}`);
+    },
+    projectToolsOrdered() {
+      let ordered = this.projectTools.sort((a, b) => (a.id < b.id ? -1 : 1));
+      if (ordered.length > 3) {
+        ordered.length = 3;
+      }
+      return ordered.reverse();
+    }
+  },
+  methods: {
+    externalSvg(icon) {
+      if (externalIcons.hasOwnProperty(icon)) {
+        return externalIcons[icon];
+      }
     }
   }
 };
@@ -171,11 +193,6 @@ export default {
       filter: grayscale(50%) blur(2px);
     }
 
-    .project__overlay {
-      // transform: translateX(14%) rotate(-17deg);
-      // transition: 0.2s;
-    }
-
     .project__action > span {
       color: $white;
       border: 2px solid $white;
@@ -256,15 +273,19 @@ export default {
     padding-right: 15%;
   }
 
+  &__svg-wrap--external {
+    > svg {
+      padding: 0.5rem;
+    }
+  }
+
   &__tool {
     margin: 0.75rem 0.75rem;
-    height: 75px;
-    width: 75px;
 
-    > svg {
+    svg {
       display: block;
-      height: 100%;
-      width: 100% !important;
+      height: 5vw;
+      width: 5vw !important;
     }
   }
 }
