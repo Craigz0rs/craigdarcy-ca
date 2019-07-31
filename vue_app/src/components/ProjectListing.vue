@@ -1,34 +1,40 @@
 <template>
   <article class="project fadeInLeft trigger">
-    <h1 class="project__title">{{ title }}</h1>
-    <div class="project__overlay project__overlay--main"></div>
-    <div
-      class="project__overlay project__overlay--bottom"
-      :style="projectStyles"
+    <a
+      :aria-label="`External link to ${title} project website`"
+      target="_blank"
+      :href="url"
+      class="project__link-overlay"
     >
-      <ul class="project__tools">
-        <li
-          class="project__tool"
-          v-for="tool in projectTools.faIcons"
-          :key="tool.id"
-        >
-          <font-awesome-icon
-            :icon="[tool.prefix, tool.name]"
-            class="project__icon"
-          ></font-awesome-icon>
-        </li>
-      </ul>
-    </div>
-    <img
-      class="project__image"
-      :src="imageSrcComputed"
-      :alt="imageAlt"
-      :title="imageTitle"
-    />
-    <a target="_blank" :href="url" class="project__link-overlay"></a>
-    <div class="project__link">
-      <a target="_blank" :href="url">View Site</a>
-    </div>
+      <h1 class="project__title">{{ title }}</h1>
+      <div class="project__overlay project__overlay--main"></div>
+      <div
+        class="project__overlay project__overlay--bottom"
+        :style="projectStyles"
+      >
+        <ul class="project__tools">
+          <li
+            class="project__tool"
+            v-for="tool in projectTools.faIcons"
+            :key="tool.id"
+          >
+            <font-awesome-icon
+              :icon="[tool.prefix, tool.name]"
+              class="project__icon"
+            ></font-awesome-icon>
+          </li>
+        </ul>
+      </div>
+      <img
+        class="project__image"
+        :src="imageSrcComputed"
+        :alt="imageAlt"
+        :title="imageTitle"
+      />
+      <div class="project__action">
+        <span>View Site</span>
+      </div>
+    </a>
   </article>
 </template>
 <script>
@@ -142,7 +148,7 @@ export default {
       z-index: 3;
     }
 
-    .project__link {
+    .project__action {
       display: block;
       z-index: 11;
 
@@ -162,7 +168,7 @@ export default {
       // transition: 0.2s;
     }
 
-    .project__link > a {
+    .project__action > span {
       color: $white;
       border: 2px solid $white;
       transition: 0.1s;
@@ -200,16 +206,14 @@ export default {
   }
 
   &__link-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0%;
-    height: 0%;
+    display: block;
+    width: 100%;
+    height: 100%;
     z-index: 10;
     transition: 0.1s;
   }
 
-  &__link {
+  &__action {
     position: absolute;
     top: 55%;
     left: 35%;
@@ -217,7 +221,7 @@ export default {
     transition: 0.2s;
     z-index: 11;
 
-    > a {
+    > span {
       display: block;
       color: transparent;
       border: 2px solid transparent;
