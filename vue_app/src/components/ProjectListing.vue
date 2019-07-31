@@ -17,11 +17,12 @@
             class="project__tool"
             v-for="tool in projectTools.faIcons"
             :key="tool.id"
+            v-html="poopy"
           >
-            <font-awesome-icon
+            <!-- <font-awesome-icon
               :icon="[tool.prefix, tool.name]"
               class="project__icon"
-            ></font-awesome-icon>
+            ></font-awesome-icon> -->
           </li>
         </ul>
       </div>
@@ -38,6 +39,8 @@
   </article>
 </template>
 <script>
+import poopy from '!raw-loader!@/assets/images/gridsome.svg';
+
 import {
   faVuejs,
   faJs,
@@ -52,6 +55,11 @@ library.add(faVuejs, faJs, faWordpress, faCss3, faHtml5, faSass, faPhp);
 
 export default {
   name: "ProjectListing",
+  data() {
+    return {
+      poopy
+    }
+  },
   props: {
     title: String,
     imageSrc: String,
