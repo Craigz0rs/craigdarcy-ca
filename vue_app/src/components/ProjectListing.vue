@@ -286,6 +286,25 @@ export default {
       display: block;
       height: 5vw;
       width: 5vw !important;
+
+      @media screen and (max-width: 1023px) {
+        height: 10vw;
+        width: 10vw !important;
+      }
+    }
+
+    &:last-of-type {
+      margin-top: 0.4rem;
+
+      svg {
+        height: 7vw;
+        width: 7vw !important;
+      
+            @media screen and (max-width: 1023px) {
+        height: 13vw;
+        width: 13vw !important;
+      }
+      }
     }
   }
 }
