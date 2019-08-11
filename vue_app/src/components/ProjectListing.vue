@@ -8,16 +8,9 @@
     >
       <h1 class="project__title">{{ title }}</h1>
       <div class="project__overlay project__overlay--main"></div>
-      <div
-        class="project__overlay project__overlay--bottom"
-        :style="projectStyles"
-      >
+      <div class="project__overlay project__overlay--bottom" :style="projectStyles">
         <ul class="project__tools">
-          <li
-            class="project__tool"
-            v-for="tool in projectToolsOrdered"
-            :key="tool.id"
-          >
+          <li class="project__tool" v-for="tool in projectToolsOrdered" :key="tool.id">
             <div
               class="project__svg-wrap project__svg-wrap--external"
               v-if="!tool.prefix"
@@ -26,21 +19,13 @@
               <span class="screenreader__text">{{ tool.name }}</span>
             </div>
             <div class="project__svg-wrap" v-if="tool.prefix">
-              <font-awesome-icon
-                :icon="[tool.prefix, tool.name]"
-                class="project__icon"
-              ></font-awesome-icon>
+              <font-awesome-icon :icon="[tool.prefix, tool.name]" class="project__icon"></font-awesome-icon>
               <span class="screenreader__text">{{ tool.name }}</span>
             </div>
           </li>
         </ul>
       </div>
-      <img
-        class="project__image"
-        :src="imageSrcComputed"
-        :alt="imageAlt"
-        :title="imageTitle"
-      />
+      <img class="project__image" :src="imageSrcComputed" :alt="imageAlt" :title="imageTitle" />
       <div class="project__action">
         <span>View Site</span>
       </div>
@@ -284,12 +269,12 @@ export default {
 
     svg {
       display: block;
-      height: 5vw;
-      width: 5vw !important;
+      height: 4vw;
+      width: 4vw !important;
 
       @media screen and (max-width: 1023px) {
-        height: 10vw;
-        width: 10vw !important;
+        height: 9vw;
+        width: 9vw !important;
       }
     }
 
@@ -299,11 +284,13 @@ export default {
       svg {
         height: 7vw;
         width: 7vw !important;
-      
-            @media screen and (max-width: 1023px) {
-        height: 13vw;
-        width: 13vw !important;
-      }
+        max-height: 110px;
+        max-width: 110px;
+
+        @media screen and (max-width: 1023px) {
+          height: 12vw;
+          width: 12vw !important;
+        }
       }
     }
   }

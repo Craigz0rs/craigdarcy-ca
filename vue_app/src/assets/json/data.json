@@ -75,10 +75,6 @@
       },
       "projectTools": [
         {
-          "id": 2,
-          "name": "gridsome"
-        },
-        {
           "prefix": "fab",
           "name": "sass",
           "id": 3
@@ -86,7 +82,7 @@
         {
           "prefix": "fab",
           "name": "js",
-          "id": 4
+          "id": 2
         },
         {
           "prefix": "fab",
@@ -107,16 +103,15 @@
         "color": "black",
         "mix-blend-mode": "lighten"
       },
-      "projectTools": [
-        {
+      "projectTools": [{
           "prefix": "fab",
           "name": "php",
-          "id": 2
+          "id": 3
         },
         {
           "prefix": "fab",
           "name": "sass",
-          "id": 3
+          "id": 2
         },
         {
           "prefix": "fab",
@@ -131,7 +126,7 @@
       "imageSrc": "jscalc.png",
       "imageAlt": "JS Calculator Project",
       "imageTitle": "JS Calculator App Project",
-      "url": "https://craigdarcy.ca/jscalculator/",
+      "url": "https://jscalc.epiqk.ca",
       "styles": {
         "background": "rgb(124, 255, 235)",
         "color": "black",
@@ -160,9 +155,9 @@
       "imageSrc": "hangar49.jpg",
       "imageAlt": "Hangar 49 Project",
       "imageTitle": "JS Calculator Site Project",
-      "url": "http://www.craigdarcy.ca/hangar49/",
+      "url": "https://hangar49.epiqk.ca",
       "styles": {
-        "background": "rgb(243, 219, 67)",
+        "background": "rgb(62, 129, 61)",
         "color": "black",
         "mix-blend-mode": "lighten"
       },
@@ -173,12 +168,12 @@
         },
         {
           "prefix": "fab",
-          "name": "php",
+          "name": "sass",
           "id": 2
         },
         {
           "prefix": "fab",
-          "name": "sass",
+          "name": "php",
           "id": 3
         }
       ]
@@ -186,18 +181,18 @@
     {
       "id": "project4",
       "title": "Glenwood Academy",
-      "imageSrc": "hangar49.jpg",
+      "imageSrc": "gacademy.jpg",
       "imageAlt": "Glenwood Academy Project",
       "imageTitle": "Glenwood Academy Site Project",
-      "url": "https://craigdarcy.ca/gacademy/",
+      "url": "https://glenwoodacademy.epiqk.ca",
       "styles": {
-        "background": "rgb(243, 219, 67)",
+        "background": "rgb(37, 147, 221)",
         "color": "black",
         "mix-blend-mode": "lighten"
       },
       "projectTools": [{
           "prefix": "fab",
-          "name": "php",
+          "name": "wordpress",
           "id": 1
         },
         {
@@ -207,7 +202,7 @@
         },
         {
           "prefix": "fab",
-          "name": "wordpress",
+          "name": "php",
           "id": 3
         }
       ]
