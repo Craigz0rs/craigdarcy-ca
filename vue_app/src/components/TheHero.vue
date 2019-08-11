@@ -5,7 +5,7 @@
       <img
         class="hero__logo"
         src="../assets/images/signature.svg"
-        alt="Craig D'Arcy"
+        aria-hidden="true"
       />
       <h1>Craig D'Arcy</h1>
       <h2>Designer and Front-End Developer</h2>
