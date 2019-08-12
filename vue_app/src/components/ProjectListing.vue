@@ -92,6 +92,9 @@ export default {
   margin: 0 25px 50px;
   overflow: hidden;
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 13px 27px -5px rgba(50,50,93,.25), 0 8px 16px -8px rgba(0,0,0,.3), 0 -6px 16px -6px rgba(0,0,0,.025);
+  box-shadow: 0 13px 27px -5px rgba(50,50,93,.25), 0 8px 16px -8px rgba(0,0,0,.3), 0 -6px 16px -6px rgba(0,0,0,.025);
+  transition: 0.4s;
 
   @media screen and (max-width: 1023px) {
     width: calc(100% - 50px);
@@ -139,6 +142,11 @@ export default {
 
   &:hover,
   &:focus {
+    transform: translateY(-5px);
+    -webkit-box-shadow: 0 30px 60px -12px rgba(50,50,93,0.25), 0 18px 36px -18px rgba(0,0,0,.3), 0 -12px 36px -8px rgba(0,0,0,.025);
+    box-shadow: 0 30px 60px -12px rgba(50,50,93,0.25), 0 18px 36px -18px rgba(0,0,0,.3), 0 -12px 36px -8px rgba(0,0,0,.025);
+    transition: 0.4s;
+    
     .project {
       &__overlay {
         &--main {
