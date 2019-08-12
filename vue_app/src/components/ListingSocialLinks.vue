@@ -41,7 +41,7 @@ export default {
         },
         {
           id: "anchor3",
-          href: "mailto:hello@craigdarcy.ca",
+          href: "mailto:craig@epiqk.io",
           title: "Send email to Craig D'Arcy",
           icon: "envelope-square",
           iconPref: "fa",
