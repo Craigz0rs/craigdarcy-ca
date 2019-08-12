@@ -174,10 +174,6 @@ export default {
     .project__action {
       display: block;
       z-index: 11;
-
-      @media screen and (max-width: 650px) {
-        left: calc(50% - 90px);
-      }
     }
 
     .project__image {
@@ -203,6 +199,12 @@ export default {
     color: transparent;
     font-size: 3em;
     font-weight: 100;
+
+    @media screen and (max-width: 799px) {
+      left: 0;
+      width: 100%;
+      padding: 0 20px;
+    }
 
     @media screen and (max-width: 500px) {
       left: 0;
@@ -244,7 +246,7 @@ export default {
   &__action {
     position: absolute;
     top: 55%;
-    left: 35%;
+    width: 100%;
     display: block;
     transition: 0.2s;
     z-index: 11;
@@ -258,6 +260,7 @@ export default {
       font-size: 20px;
       text-align: center;
       padding: 10px 0;
+      margin: 0 auto;
       width: 180px;
       border-radius: 4px;
       cursor: pointer;

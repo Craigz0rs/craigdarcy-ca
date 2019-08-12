@@ -61,10 +61,11 @@
       }
     ]
   },
-  "projects": [{
+  "projects": [
+    {
       "id": "project0",
       "title": "Portfolio",
-      "imageSrc": "portfolio.jpg",
+      "imageSrc": "portfolio-optimized.jpg",
       "imageAlt": "Portfolio Project",
       "imageTitle": "Portfolio Site Project",
       "url": "https://craigdarcy.ca",
@@ -92,9 +93,38 @@
       ]
     },
     {
+      "id": "project3",
+      "title": "Hangar 49",
+      "imageSrc": "hangar49-optimized.jpg",
+      "imageAlt": "Hangar 49 Project",
+      "imageTitle": "JS Calculator Site Project",
+      "url": "https://hangar49.epiqk.ca",
+      "styles": {
+        "background": "rgb(62, 129, 61)",
+        "color": "black",
+        "mix-blend-mode": "lighten"
+      },
+      "projectTools": [{
+          "prefix": "fab",
+          "name": "wordpress",
+          "id": 1
+        },
+        {
+          "prefix": "fab",
+          "name": "sass",
+          "id": 2
+        },
+        {
+          "prefix": "fab",
+          "name": "php",
+          "id": 3
+        }
+      ]
+    },
+    {
       "id": "project1",
       "title": "HD Training",
-      "imageSrc": "teamhd.jpg",
+      "imageSrc": "teamhd-optimized.jpg",
       "imageAlt": "HD Training Project",
       "imageTitle": "HD Training Site Project",
       "url": "https://hdtraining.maxrepmedia.com",
@@ -123,7 +153,7 @@
     {
       "id": "project2",
       "title": "JS Calculator",
-      "imageSrc": "jscalc.png",
+      "imageSrc": "jscalc-optimized.jpg",
       "imageAlt": "JS Calculator Project",
       "imageTitle": "JS Calculator App Project",
       "url": "https://jscalc.epiqk.ca",
@@ -150,38 +180,9 @@
       ]
     },
     {
-      "id": "project3",
-      "title": "Hangar 49",
-      "imageSrc": "hangar49.jpg",
-      "imageAlt": "Hangar 49 Project",
-      "imageTitle": "JS Calculator Site Project",
-      "url": "https://hangar49.epiqk.ca",
-      "styles": {
-        "background": "rgb(62, 129, 61)",
-        "color": "black",
-        "mix-blend-mode": "lighten"
-      },
-      "projectTools": [{
-          "prefix": "fab",
-          "name": "wordpress",
-          "id": 1
-        },
-        {
-          "prefix": "fab",
-          "name": "sass",
-          "id": 2
-        },
-        {
-          "prefix": "fab",
-          "name": "php",
-          "id": 3
-        }
-      ]
-    },
-    {
       "id": "project4",
       "title": "Glenwood Academy",
-      "imageSrc": "gacademy.jpg",
+      "imageSrc": "gacademy-optimized.jpg",
       "imageAlt": "Glenwood Academy Project",
       "imageTitle": "Glenwood Academy Site Project",
       "url": "https://glenwoodacademy.epiqk.ca",
