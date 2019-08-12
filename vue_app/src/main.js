@@ -1,6 +1,7 @@
 import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
+import VueProgressiveImage from "vue-progressive-image";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
@@ -13,6 +14,8 @@ library.add(faLinkedin, faGithubSquare, faEnvelopeSquare);
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 
 Vue.config.productionTip = false;
+
+Vue.use(VueProgressiveImage);
 
 new Vue({
   router,

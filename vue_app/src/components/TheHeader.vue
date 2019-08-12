@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header class="header" role="banner">
     <ListingSocialLinks :ul-class="'social__list--header'" />
     <br class="responsive-break" />
   </header>

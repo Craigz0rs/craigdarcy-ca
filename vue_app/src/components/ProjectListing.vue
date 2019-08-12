@@ -25,7 +25,7 @@
           </li>
         </ul>
       </div>
-      <img class="project__image" :src="imageSrcComputed" :alt="imageAlt" />
+      <progressive-img class="project__image" :src="imageSrcComputed" :alt="imageAlt" />
       <div class="project__action">
         <span>View Site</span>
       </div>
@@ -173,9 +173,11 @@ export default {
     }
 
     .project__image {
-      transition: 0.2s ease-in-out;
-      transform: scale(1.1);
-      filter: grayscale(50%) blur(2px);
+      img {
+        transition: 0.2s ease-in-out;
+        transform: scale(1.1);
+        filter: grayscale(50%) blur(2px);
+      }
     }
 
     .project__action > span {
@@ -207,13 +209,21 @@ export default {
   }
 
   &__image {
-    position: relative;
-    object-fit: cover;
-    object-position: top;
     height: 100%;
-    width: 100%;
-    transition: 0.2s;
+
+    img {
+      object-fit: cover;
+      object-position: top;
+      min-height: 100%;
+      width: 100%;
+      min-height: 100%;
+      transition: 0.2s;
+    }
   }
+
+  // .progressive-image-main {
+  //   min-height: 100%;
+  // }
 
   &__link-overlay {
     display: block;

@@ -8109,6 +8109,11 @@ vue-particles@^1.0.9:
     particles.js "^2.0.0"
     vue "^2.2.6"
 
+vue-progressive-image@^3.2.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/vue-progressive-image/-/vue-progressive-image-3.2.0.tgz#a6443f78bda87846f94e900b119e7ed0b6f3365f"
+  integrity sha512-D1DSBOIw2nAJHTDT2aVn2lDROKGd4XvCIIH5JY2t5yjNcDppRXzqXRqrGYRFcRbtA+6XV17s55VszFFItiNLcg==
+
 vue-router@^3.0.7:
   version "3.0.7"
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.0.7.tgz#b36ca107b4acb8ff5bc4ff824584059c23fcb87b"
