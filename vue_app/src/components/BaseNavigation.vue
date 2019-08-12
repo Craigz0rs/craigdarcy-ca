@@ -1,5 +1,5 @@
 <template>
-  <nav class="nav nav--main">
+  <nav class="nav nav--main" aria-label="Main Navigation" role="navigation">
     <ul class="nav__list">
       <li class="nav__item" :key="link.id" v-for="link in links">
         <router-link

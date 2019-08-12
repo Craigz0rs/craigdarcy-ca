@@ -1,9 +1,9 @@
 <template>
   <div class="content">
     <TheContentTopper />
-    <div class="content__wrap">
+    <main class="content__wrap" role="main">
       <router-view></router-view>
-    </div>
+    </main>
   </div>
 </template>
 

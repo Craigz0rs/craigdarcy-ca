@@ -42,8 +42,7 @@
       fitness goals, Netflix binging, and eating burgers.
     </p>
     <p>
-      I am currently seeking front-end developer roles in the Vancouver and
-      Calgary regions.
+      I am currently seeking front-end developer roles in the Vancouver.
     </p>
   </section>
 </template>

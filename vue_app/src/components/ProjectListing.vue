@@ -9,7 +9,7 @@
       <h1 class="project__title">{{ title }}</h1>
       <div class="project__overlay project__overlay--main"></div>
       <div class="project__overlay project__overlay--bottom" :style="projectStyles">
-        <ul class="project__tools">
+        <ul class="project__tools" aria-label="Tools used in this project include:">
           <li class="project__tool" v-for="tool in projectToolsOrdered" :key="tool.id">
             <div
               class="project__svg-wrap project__svg-wrap--external"
@@ -25,7 +25,7 @@
           </li>
         </ul>
       </div>
-      <img class="project__image" :src="imageSrcComputed" :alt="imageAlt" :title="imageTitle" />
+      <img class="project__image" :src="imageSrcComputed" :alt="imageAlt" />
       <div class="project__action">
         <span>View Site</span>
       </div>
