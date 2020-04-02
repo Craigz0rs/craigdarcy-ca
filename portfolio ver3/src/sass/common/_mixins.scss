@@ -1,0 +1,30 @@
+/* Breakpoints */
+  @mixin small {
+    @media all and (max-width: 600px) {
+      @content;
+    }
+  }
+  
+  @mixin medium {
+    @media all and (max-width: 900px) {
+      @content;
+    }
+  }
+  
+  @mixin large {
+    @media all and (max-width: 1200px) {
+      @content;
+    }
+  }
+  
+  @mixin xlarge {
+    @media all and (max-width: 1800px) {
+      @content;
+    }
+  }
+
+  @mixin mobile-break {
+    @media all and (max-width: 959px) {
+      @content;
+    }
+  }

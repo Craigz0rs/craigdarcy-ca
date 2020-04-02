@@ -1,0 +1,13 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.content-wrap {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: $gutter;
+}
+
+.grid {
+    display: grid;
+}

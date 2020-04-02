@@ -3,30 +3,12 @@ import PropTypes from "prop-types"
 import React from "react"
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
+  <header className="header">
+    <div className="grid content-wrap">
+
+    </div>
+    <div className="header__overlay">
+    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1278.95 219.49"><path class="cls-1" d="M458-672.1C63.67-467.67-820.48-453.93-820.48-453.93l1278.4-.17Z" transform="translate(820.49 672.92)"/></svg>
     </div>
   </header>
 )
