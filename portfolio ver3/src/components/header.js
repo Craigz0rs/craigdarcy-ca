@@ -1,17 +1,39 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import Signature from "../images/signature.svg"
+import Overlay from "../images/header__overlay.svg"
+import { useSpring, animated } from 'react-spring'
 
-const Header = ({ siteTitle }) => (
-  <header className="header">
+const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2]
+const trans1 = (x, y) => `translate3d(${x / 10}px,${y / 10}px,0)`
+const trans2 = (x, y) => `translate3d(${x / 85}px,${y / 1000}px,0) scale(1.1)`
+const trans3 = (x, y) => `translate3d(${x / 100}px,${y / 50}px,0) scale(2) rotate(3deg)`
+const trans4 = (x, y) => `translate3d(${x / 10 - 1}px,${y / 100}px,0) scale(2) rotate(-12deg) rotateY(180deg)`
+
+function Header() {
+  const [props, set] = useSpring(() => ({ xy: [0, 0], config: { mass: 30, tension: 500, friction: 50 } }))
+  return (
+  <header className="header" onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
     <div className="grid content-wrap">
-
+      <div className="header__signature-wrap">
+        <Signature />
+      </div>
     </div>
-    <div className="header__overlay">
-    <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1278.95 219.49"><path class="cls-1" d="M458-672.1C63.67-467.67-820.48-453.93-820.48-453.93l1278.4-.17Z" transform="translate(820.49 672.92)"/></svg>
+    <div className="header__overlay-wrap">
+      <animated.div className="header__overlay header__overlay--2 header__overlay--animated" style={{ transform: props.xy.interpolate(trans3) }}>
+        <Overlay />
+      </animated.div>
+      <animated.div className="header__overlay header__overlay--3 header__overlay--animated" style={{ transform: props.xy.interpolate(trans4) }}>
+        <Overlay />
+      </animated.div>
+      <animated.div className="header__overlay header__overlay--1" style={{ transform: props.xy.interpolate(trans2) }}> 
+        <Overlay />
+      </animated.div>
     </div>
   </header>
-)
+  )
+}
 
 Header.propTypes = {
   siteTitle: PropTypes.string,
