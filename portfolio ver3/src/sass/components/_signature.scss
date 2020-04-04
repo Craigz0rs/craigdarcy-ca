@@ -1,0 +1,91 @@
+$outline__g: 477;
+$outline__d: 965;
+$outline__y: 581;
+$outline__apost: 135;
+$outline__arc: 1184;
+$outline__crai: 2063;
+
+
+@mixin path($dash-length, $aniname) {
+    stroke-dasharray: $dash-length;
+    animation: $aniname 2s ease-in-out;
+
+    @keyframes #{$aniname} {
+        0% {
+          stroke-dashoffset: $dash-length;
+          fill: rgba(255,255,255, 0);
+        }
+        30% {
+          fill: rgba(255,255,255, 0);
+        }
+        75% {
+          stroke-dashoffset: 0;
+        }
+        100% {
+          fill: rgba(255,255,255, 1);
+        }
+    }
+}
+
+@keyframes fillin {
+    0% {
+        fill: transparent;
+    }
+    75% {
+        fill: rgba(255,255,255, 1);
+    }
+}
+
+
+.st0 {
+    stroke: white;
+    fill: rgba(255,255,255, 1);
+}
+
+#outline__g {
+    stroke-dasharray: $outline__g;
+    stroke-dashoffset: 0;
+    &.pathanimate {
+        @include path($outline__g, g);
+    }
+}
+
+#outline__d {
+    stroke-dasharray: $outline__d;
+    stroke-dashoffset: 0;
+    &.pathanimate {
+        @include path($outline__d, d);
+    }
+}
+
+#outline__y { 
+    stroke-dasharray: $outline__y;
+    stroke-dashoffset: 0;
+    &.pathanimate {
+        @include path($outline__y, y);
+    }
+}
+
+#outline__apost {
+    stroke-dasharray: $outline__apost;
+    stroke-dashoffset: 0;
+    &.pathanimate {
+        @include path($outline__apost, apost);
+    }
+}
+
+#outline__arc {
+    stroke-dasharray: $outline__arc;
+    stroke-dashoffset: 0;
+    &.pathanimate {
+        @include path($outline__arc, arc);
+    }
+}
+
+#outline__crai {
+    stroke-dasharray: $outline__crai;
+    stroke-dashoffset: 0;
+    &.pathanimate {
+        @include path($outline__crai, crai);
+    }
+}
