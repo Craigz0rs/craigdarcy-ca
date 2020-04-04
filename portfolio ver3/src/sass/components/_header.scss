@@ -1,6 +1,6 @@
 .header {
     position: relative;
-    height: 80vh;
+    height: 100vh;
     background: linear-gradient(180deg,#013087,#00b3ff);
     overflow: hidden;
 
@@ -44,5 +44,9 @@
             stroke: transparent;
             // transform: scale(1.2) translate(-31px, -7px) rotate(-12deg) rotateY(180deg);
         }
+    }
+
+    &__signature-wrap {
+        margin-top: 20vh;
     }
 }

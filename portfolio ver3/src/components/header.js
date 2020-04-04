@@ -3,10 +3,11 @@ import PropTypes from "prop-types"
 import React from "react"
 import Signature from "../images/signature.svg"
 import Overlay from "../images/header__overlay.svg"
+import Nav from "./nav"
 import { useSpring, animated } from 'react-spring'
 
 const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2]
-const signature = (x, y) => `translate3d(${x / -175 }px,${y / 200}px,0) rotate(-5deg)`
+const signature = (x, y) => `translate3d(${x / -175 }px,${y / -200}px,0) rotate(-5deg)`
 const trans2 = (x, y) => `translate3d(${x / 85}px,${y / 1000}px,0) scale(1.1)`
 const trans3 = (x, y) => `translate3d(${x / 100}px,${y / 50}px,0) scale(2) rotate(3deg)`
 const trans4 = (x, y) => `translate3d(${x / 10 - 1}px,${y / 100}px,0) scale(2) rotate(-12deg) rotateY(180deg)`
@@ -19,6 +20,9 @@ function Header() {
       <animated.div className="header__signature-wrap" style={{ transform: props.xy.interpolate(signature) }}>
         <Signature />
       </animated.div>
+      <div className="header__nav-wrap">
+        <Nav />
+      </div>
     </div>
     <div className="header__overlay-wrap">
       <animated.div className="header__overlay header__overlay--2 header__overlay--animated" style={{ transform: props.xy.interpolate(trans3) }}>
