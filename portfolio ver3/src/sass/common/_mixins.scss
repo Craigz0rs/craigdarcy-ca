@@ -28,3 +28,75 @@
       @content;
     }
   }
+
+  @mixin path($dash-length, $aniname) {
+    stroke-dasharray: $dash-length;
+    animation: $aniname 2s ease-in-out;
+
+    @keyframes #{$aniname} {
+        0% {
+          stroke-dashoffset: $dash-length;
+          fill: rgba(255,255,255, 0);
+        }
+        30% {
+          fill: rgba(255,255,255, 0);
+        }
+        75% {
+          stroke-dashoffset: 0;
+        }
+        100% {
+          fill: rgba(255,255,255, 1);
+        }
+    }
+}
+
+@mixin path2($dash-length, $aniname, $delay, $duration) {
+  stroke-dasharray: $dash-length;
+  animation: $aniname $duration ease-in-out $delay 1 normal forwards;
+
+  @keyframes #{$aniname} {
+      0% {
+        stroke-dashoffset: $dash-length;
+      }
+
+      100% {
+        stroke-dashoffset: 0;
+      }
+  }
+}
+
+@mixin outline-reverse($dash-length, $aniname, $delay, $duration) {
+  stroke-dasharray: $dash-length;
+  animation: $aniname $duration ease-in-out 0 1 normal reverse;
+
+  @keyframes #{$aniname} {
+      0% {
+        stroke-dashoffset: $dash-length;
+      }
+
+      100% {
+        stroke-dashoffset: 0;
+      }
+  }
+}
+
+@mixin icon-image-animate($dash-length, $aniname, $delay, $duration) {
+  stroke-dasharray: $dash-length;
+  animation: $aniname $duration ease-in-out $delay 1 normal forwards;
+
+  @keyframes #{$aniname} {
+    0% {
+      stroke-dashoffset: $dash-length;
+      fill: rgba(255,255,255, 0);
+    }
+    30% {
+      fill: rgba(255,255,255, 0);
+    }
+    75% {
+      stroke-dashoffset: 0;
+    }
+    100% {
+      fill: rgba(255,255,255, 1);
+    }
+}
+}

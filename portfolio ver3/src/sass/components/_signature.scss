@@ -5,38 +5,6 @@ $outline__apost: 135;
 $outline__arc: 1184;
 $outline__crai: 2063;
 
-
-@mixin path($dash-length, $aniname) {
-    stroke-dasharray: $dash-length;
-    animation: $aniname 2s ease-in-out;
-
-    @keyframes #{$aniname} {
-        0% {
-          stroke-dashoffset: $dash-length;
-          fill: rgba(255,255,255, 0);
-        }
-        30% {
-          fill: rgba(255,255,255, 0);
-        }
-        75% {
-          stroke-dashoffset: 0;
-        }
-        100% {
-          fill: rgba(255,255,255, 1);
-        }
-    }
-}
-
-@keyframes fillin {
-    0% {
-        fill: transparent;
-    }
-    75% {
-        fill: rgba(255,255,255, 1);
-    }
-}
-
-
 .st0 {
     stroke: white;
     fill: rgba(255,255,255, 1);

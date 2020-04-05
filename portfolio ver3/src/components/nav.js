@@ -1,4 +1,8 @@
 import React from "react"
+import Github from "../images/github.svg"
+import Info from "../images/info2.svg"
+import Linkedin from "../images/linkedin3.svg"
+import Projects from "../images/projects.svg"
 
 const Nav = () => {
     return (
@@ -6,19 +10,27 @@ const Nav = () => {
             <a href="https://github.com/Craigz0rs"
                 className="nav__item"
                 aria-label="External link to my GitHub"
-            ></a>
+            >
+                <Github />
+            </a>
             <a href="#about"
                 className="nav__item"
                 aria-label="Read more about me"
-            ></a>
+            >
+                <Info />
+            </a>
             <a href="#projects"
                 className="nav__item"
                 aria-label="Learn about my work"
-            ></a>
+            >
+                <Projects />
+            </a>
             <a href="https://linkedin.com/ln/craigdarcy"
                 className="nav__item"
                 aria-label="External link to my LinkedIn profile"
-            ></a>
+            >
+                <Linkedin />
+            </a>
         </nav>
     )
 }

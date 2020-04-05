@@ -46,6 +46,11 @@
         }
     }
 
+    &__content {
+        position: relative;
+        z-index: 99;
+    }
+
     &__signature-wrap {
         margin-top: 20vh;
     }

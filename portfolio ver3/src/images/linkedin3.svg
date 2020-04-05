@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.55 128.54">
+    <defs>
+        <style>.cls-1{fill:none;}</style>
+    </defs>
+    <g id="Layer_2" data-name="Layer 2">
+        <g id="linkedin-icon" className="icon icon__linkedin" data-name="Layer 2">
+            <path className="icon__outline pathanimate" d="M8.63,128.54H120c8.59-1,8.59-8.58,8.59-8.58V8.87s.27-7.45-8.5-8.87H9.21C-.43.42,0,9,0,9V119.88s-.43,8,8.58,8.66"/>
+            <polyline className="icon__image pathanimate" points="19.21 109.54 19.21 48.29 38.3 48.29 38.3 109.54 19.23 109.54"/>
+            <path className="icon__image pathanimate" d="M50.32,109.54V48.29H68.59v8.46a20.63,20.63,0,0,1,18.33-10c4.67-.27,13.92,1.33,18,7.37,0,0,4.25,4.55,4.71,18.46v37H90.75V76.42c-.37-11.84-5.9-12.84-10-13-12-.17-11.5,12.66-11.5,12.66v33.46H50.38"/>
+            <path className="icon__image pathanimate" d="M28.75,39.87c-7.86-.51-11.16-5.51-11.1-10.62.07-5.74,4.34-11.61,11.1-11.46,7.84.59,11.2,5.82,11.07,11-.13,5.53-4.18,11.05-11,11"/>
+        </g>
+    </g>
+</svg>

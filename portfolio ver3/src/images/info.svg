@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128.55 128.54">
+    <defs>
+        <style>.cls-1{fill:none;}</style>
+    </defs>
+    <g id="Layer_2" data-name="Layer 2">
+        <g id="info-icon" className="icon icon__info" data-name="Layer 4">
+            <path className="icon__outline pathanimate" d="M8.63,128.54H120c8.59-1,8.59-8.58,8.59-8.58V8.87s.27-7.45-8.5-8.87H9.21C-.43.42,0,9,0,9V119.88s-.43,8,8.58,8.66"/>
+            <path class="icon__image1 pathanimate" d="M24.38,99.52c16.81-26,39.89-23,39.89-23s26.15-1,40.11,23c1.23,3.33-3.77,4.75-5.5,2.75C87.21,81.85,64.25,82,64.25,82s-24.2-.42-34.57,20.37c-.16,1.36-6.28,1.94-5.36-2.79"/>
+            <path class="icon__image2 pathanimate" d="M64.25,68.15C40.38,66.77,41.19,44.52,41.19,44.52S41.18,23,64.35,22c24.53,1.25,23,23.75,23,23.75s1.1,21-23,22.38"/>
+            <path class="icon__image3 pathanimate" d="M64.27,62.27c-17.11-1.4-17.11-17.19-17.11-17.19s0-15.86,17.09-17c17.1,1.69,17.1,17.1,17.1,17.1s.64,15.51-17,17.09"/>
+        </g>
+    </g>
+</svg>

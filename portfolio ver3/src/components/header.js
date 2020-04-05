@@ -16,7 +16,7 @@ function Header() {
   const [props, set] = useSpring(() => ({ xy: [0, 0], config: { mass: 30, tension: 500, friction: 50 } }))
   return (
   <header className="header" onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
-    <div className="grid content-wrap">
+    <div className="grid content-wrap header__content">
       <animated.div className="header__signature-wrap" style={{ transform: props.xy.interpolate(signature) }}>
         <Signature />
       </animated.div>

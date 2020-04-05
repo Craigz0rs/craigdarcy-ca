@@ -1,0 +1,111 @@
+$icon-outline-length: 500;
+$icon-outline-duration: 1s;
+$icon-image-duration: 0.5s;
+$icon-github-length: 512;
+$icon-projects-length: 734;
+$icon-info-length1: 198;
+$icon-info-length2: 146;
+$icon-info-length3: 124;
+
+#github-icon {
+    .icon__outline {
+
+        // &.pathanimate {
+        //     @include path2($icon-outline-length, icon-outline, 1.4s, $icon-outline-duration);
+        // }
+    }
+    .icon__image {
+        stroke-dasharray: $icon-github-length;
+        stroke-dashoffset: $icon-github-length;
+        &.pathanimate {
+            @include icon-image-animate($icon-github-length, git-image-animate, 1.1s, $icon-image-duration);
+        }
+    }
+}
+
+#info-icon {
+    .icon__outline {
+        // stroke-dasharray: $icon-outline-length;
+        // stroke-dashoffset: $icon-outline-length;
+        // &.pathanimate {
+        //     @include path2($icon-outline-length, icon-outline, 0.3s, $icon-outline-duration);
+        // }
+    }
+    .icon__image1 {
+        stroke-dasharray: $icon-info-length1;
+        stroke-dashoffset: $icon-info-length1;
+        &.pathanimate {
+            @include icon-image-animate($icon-info-length1, icon-outline-image1, 1.3s, $icon-outline-duration);
+        }
+    }
+    .icon__image2 {
+        stroke-dasharray: $icon-info-length2;
+        stroke-dashoffset: $icon-info-length2;
+        stroke-width: 7px;
+        &.pathanimate {
+            @include path2($icon-info-length2, icon-outline2, 1.3s, $icon-outline-duration);
+        }
+    }
+    .icon__image3 {
+        stroke-dasharray: $icon-info-length3;
+        stroke-dashoffset: $icon-info-length3;
+        stroke-width: 7px;
+        &.pathanimate {
+            @include path2($icon-info-length3, icon-outline3, 1.3s, $icon-outline-duration);
+        }
+    }
+
+}
+
+#projects-icon {
+    .icon__outline {
+        // stroke-dasharray: $icon-outline-length;
+        // stroke-dashoffset: $icon-outline-length;
+        // &.pathanimate {
+        //     @include path2($icon-outline-length, icon-outline, 0.4s, $icon-outline-duration);
+        // }
+    }
+    .icon__image {
+        stroke-dasharray: $icon-projects-length;
+        stroke-dashoffset: $icon-projects-length;
+        stroke-width: 4px;
+        &.pathanimate {
+            @include path2($icon-projects-length, icon-outline-image, 1.5s, $icon-outline-duration);
+        }
+    }
+}
+
+#linkedin-icon {
+    .icon__outline {
+        // stroke-dasharray: $icon-outline-length;
+        // stroke-dashoffset: $icon-outline-length;
+        // &.pathanimate {
+        //     @include path2($icon-outline-length, icon-outline, 0.5s, $icon-outline-duration);
+        // }
+    }
+    .icon__image {
+        stroke-dasharray: $icon-github-length;
+        stroke-dashoffset: $icon-github-length;
+        &.pathanimate {
+            @include icon-image-animate($icon-github-length, linkedin-image-animate, 1.7s, $icon-image-duration);
+        }
+    }
+}
+
+
+.icon__outline {
+    stroke-dasharray: $icon-outline-length;
+    stroke-dashoffset: $icon-outline-length;
+    stroke-width: 6px;
+    transition: 0.3s;
+    
+}
+
+.nav__item:hover,
+.nav__item:focus {
+    .icon__outline {
+        stroke-dashoffset: 0;
+        transition: 0.4s;
+        transition-timing-function: ease-in-out;
+    }
+}
