@@ -57,3 +57,8 @@ $outline__crai: 2063;
         @include path($outline__crai, crai);
     }
 }
+
+.header--no-animate .header__signature-wrap .pathanimate {
+    animation: none !important;
+    stroke: white;
+}

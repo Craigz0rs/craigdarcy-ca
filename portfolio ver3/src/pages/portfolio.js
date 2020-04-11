@@ -1,8 +1,8 @@
 import React from "react"
 import Layout from "../components/layout"
 
-const Portfolio = () => (
-    <Layout>
+const Portfolio = ({location}) => (
+    <Layout currentPage={location.pathname}>
         <>
         
         </>

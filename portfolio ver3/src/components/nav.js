@@ -8,12 +8,12 @@ import Projects from "../images/projects.svg"
 const Nav = () => {
     return (
         <nav className="nav">
-            <a href="https://github.com/Craigz0rs"
+            <Link to="/"
                 className="nav__item"
                 aria-label="External link to my GitHub"
             >
                 <Github />
-            </a>
+            </Link>
             <Link to="/aboutme"
                 className="nav__item"
                 aria-label="Read more about me"
