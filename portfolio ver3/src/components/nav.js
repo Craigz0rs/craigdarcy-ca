@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import Github from "../images/github.svg"
 import Info from "../images/info2.svg"
 import Linkedin from "../images/linkedin3.svg"
@@ -13,18 +14,18 @@ const Nav = () => {
             >
                 <Github />
             </a>
-            <a href="#about"
+            <Link to="/aboutme"
                 className="nav__item"
                 aria-label="Read more about me"
             >
                 <Info />
-            </a>
-            <a href="#projects"
+            </Link>
+            <Link to="/portfolio"
                 className="nav__item"
                 aria-label="Learn about my work"
             >
                 <Projects />
-            </a>
+            </Link>
             <a href="https://linkedin.com/ln/craigdarcy"
                 className="nav__item"
                 aria-label="External link to my LinkedIn profile"
