@@ -3,6 +3,7 @@
     height: 100vh;
     background: linear-gradient(180deg,#013087,#00b3ff);
     overflow: hidden;
+    transition: 0.4s;
 
     &__overlay-wrap {
         position: absolute;
@@ -47,11 +48,121 @@
     }
 
     &__content {
+        display: flex;
+        flex-wrap: wrap;
         position: relative;
         z-index: 99;
     }
 
     &__signature-wrap {
+        width: 100%;
         margin-top: 20vh;
+    }
+
+    &__nav-wrap {
+        width: 100%;
+    }
+
+    &--no-animate {
+
+    }
+
+    &--minimized {
+        height: 150px;
+        animation: header__animation--minimized 2s ease-out;
+
+        & .header {
+            &__content {
+                width: 1000px;
+                flex-wrap: nowrap;
+                padding: 20px $gutter 0;
+                animation: content__animation--shrink 2s ease forwards;
+            }
+
+            &__nav-wrap {
+                width: 50%;
+            }
+
+            &__signature-wrap {
+                animation: signature__animation--shrink 2s ease-out forwards;
+            }
+
+            &__overlay--1 {
+                bottom: 57px;
+                left: -36%;
+                transform: scale(2) rotate(11deg);
+            }
+
+            &__overlay--2 {
+                display: none;
+            }
+
+            &__overlay--3 {
+                bottom: 76px;
+            }
+        }
+
+        & .nav {
+            &__item {
+                animation: nav__animation--shrink 0.4s ease-out forwards;
+            }
+        }
+    }
+
+    &--full {
+        height: 100vh;
+        animation: header__animation--minimized 0.4s ease-out reverse;
+
+        & .header {
+            &__content {
+                width: 1000px;
+            }
+        }
+    }
+
+    @keyframes header__animation--minimized {
+        from {
+            height: 100vh;
+        }
+        to {
+            height: 200px;
+        }
+    }
+
+    @keyframes header__animation--expand {
+        to {
+            height: 100vh;
+        }
+    }
+
+    @keyframes signature__animation--shrink {
+        from {
+            width: 100%;
+        }
+        to {
+            width: 250px;
+            margin-top: 0px;
+            transform: rotate(-4deg);
+        }
+    }
+
+    @keyframes nav__animation--shrink {
+        from {
+            width: 100%;
+        }
+        to {
+            width: 50px;
+        }
+    }
+
+    @keyframes content__animation--shrink {
+        from {
+            grid-template-columns: 1fr;
+            padding: $gutter;
+        }
+        to {
+
+            padding: 20px $gutter 0;
+        }
     }
 }

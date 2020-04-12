@@ -14,39 +14,44 @@ const trans4 = (x, y) => `translate3d(${x / 10 - 1}px,${y / 100}px,0) scale(2) r
 
 function Header({currentPage}) {
   const [isIndex, setIsIndex] = useState(false)
+  const [triggerResize, setTriggerResize] = useState(false)
   const [props, set] = useSpring(() => ({ xy: [0, 0], config: { mass: 30, tension: 500, friction: 50 } }))
   const toggleIsIndex = () => setIsIndex(!isIndex)
+  const toggleTriggerResize = () => setTriggerResize(!triggerResize)
   useEffect(() => {
-    console.log(currentPage + isIndex)
     if(currentPage === "/") {
       toggleIsIndex()
     }
   }, [])
   
   return (
-    
-  <header className={isIndex ? "header" : "header header--no-animate"} onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
-  {console.log(currentPage + isIndex)}
-    <div className="grid content-wrap header__content">
-      <animated.div className="header__signature-wrap" style={{ transform: props.xy.interpolate(signature) }}>
-        <Signature />
-      </animated.div>
-      <div className="header__nav-wrap">
-        <Nav />
+    <header 
+      className={isIndex ? "header header--animated header--full" : "header header--no-animate header--minimized"} 
+      onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
+    >
+      <div className="grid content-wrap header__content">
+        <animated.div className="header__signature-wrap" style={isIndex ? { transform: props.xy.interpolate(signature) } : {}}>
+          <Signature />
+        </animated.div>
+        <div className="header__nav-wrap">
+          <Nav 
+            currentPage={currentPage}
+            isIndex={isIndex}
+          />
+        </div>
       </div>
-    </div>
-    <div className="header__overlay-wrap">
-      <animated.div className="header__overlay header__overlay--2 header__overlay--animated" style={{ transform: props.xy.interpolate(trans3) }}>
-        <Overlay />
-      </animated.div>
-      <animated.div className="header__overlay header__overlay--3 header__overlay--animated" style={{ transform: props.xy.interpolate(trans4) }}>
-        <Overlay />
-      </animated.div>
-      <animated.div className="header__overlay header__overlay--1" style={{ transform: props.xy.interpolate(trans2) }}> 
-        <Overlay />
-      </animated.div>
-    </div>
-  </header>
+      <div className="header__overlay-wrap">
+        <animated.div className="header__overlay header__overlay--2 header__overlay--animated" style={{ transform: props.xy.interpolate(trans3) }}>
+          <Overlay />
+        </animated.div>
+        <animated.div className="header__overlay header__overlay--3 header__overlay--animated" style={{ transform: props.xy.interpolate(trans4) }}>
+          <Overlay />
+        </animated.div>
+        <animated.div className="header__overlay header__overlay--1" style={isIndex? { transform: props.xy.interpolate(trans2) } : {}}> 
+          <Overlay />
+        </animated.div>
+      </div>
+    </header>
   )
 }
 
