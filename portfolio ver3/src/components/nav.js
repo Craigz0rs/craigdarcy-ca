@@ -5,7 +5,8 @@ import Info from "../images/info2.svg"
 import Linkedin from "../images/linkedin3.svg"
 import Projects from "../images/projects.svg"
 
-const Nav = () => {
+const Nav = ({isIndex}) => {
+
     return (
         <nav className="nav">
             <a href="https://github.com/Craigz0rs"
@@ -17,12 +18,14 @@ const Nav = () => {
             <Link to="/aboutme"
                 className="nav__item"
                 aria-label="Read more about me"
+                state={isIndex ? {fromIndex: true} : {fromIndex: false}}
             >
                 <Info />
             </Link>
             <Link to="/portfolio"
                 className="nav__item"
                 aria-label="Learn about my work"
+                state={isIndex ? {fromIndex: true} : {fromIndex: false}}
             >
                 <Projects />
             </Link>

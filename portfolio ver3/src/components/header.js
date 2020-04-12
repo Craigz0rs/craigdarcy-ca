@@ -1,6 +1,6 @@
 import { Link } from "gatsby"
 import PropTypes from "prop-types"
-import React from "react"
+import React, {useState, useEffect} from "react"
 import Signature from "../images/signature.svg"
 import Overlay from "../images/header__overlay.svg"
 import Nav from "./nav"
@@ -12,16 +12,36 @@ const trans2 = (x, y) => `translate3d(${x / 85}px,${y / 1000}px,0) scale(1.1)`
 const trans3 = (x, y) => `translate3d(${x / 100}px,${y / 50}px,0) scale(2) rotate(3deg)`
 const trans4 = (x, y) => `translate3d(${x / 10 - 1}px,${y / 100}px,0) scale(2) rotate(-12deg) rotateY(180deg)`
 
-function Header() {
+function Header({currentPage, index, fromIndex, fromPage}) {
   const [props, set] = useSpring(() => ({ xy: [0, 0], config: { mass: 30, tension: 500, friction: 50 } }))
+  let classes = "header"
+
+  const classNames = () => {
+    if (!index) {
+      classes = classes.concat(" header--minimized")
+      if (fromIndex) {
+        classes = classes.concat(" page-transition")
+      }
+    } else {
+      if (!fromIndex && fromPage) {
+        classes = classes.concat(" page-transition")
+      }
+    }
+    return classes
+  }
+
   return (
-  <header className="header" onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
+  <header className={
+    classNames()
+  } onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
     <div className="grid content-wrap header__content">
       <animated.div className="header__signature-wrap" style={{ transform: props.xy.interpolate(signature) }}>
-        <Signature />
+        <Link to="/" state={index ? {fromIndex: true, fromPage: false} : {fromIndex: false, fromPage: true}}>
+          <Signature />
+        </Link>
       </animated.div>
       <div className="header__nav-wrap">
-        <Nav />
+        <Nav isIndex={index}/>
       </div>
     </div>
     <div className="header__overlay-wrap">

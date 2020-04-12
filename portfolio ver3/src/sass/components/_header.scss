@@ -3,6 +3,7 @@
     height: 100vh;
     background: linear-gradient(180deg,#013087,#00b3ff);
     overflow: hidden;
+    transition: 0.4s;
 
     &__overlay-wrap {
         position: absolute;
@@ -53,5 +54,29 @@
 
     &__signature-wrap {
         margin-top: 20vh;
+    }
+
+    &--minimized {
+        height: 40vh;
+
+        &.page-transition {
+            animation: header__animation--minimize 0.4s ease;
+        }
+    }
+
+    &:not(.header--minimized) {
+
+        &.page-transition {
+            animation: header__animation--minimize 0.4s ease reverse;
+        }
+    }
+
+    @keyframes header__animation--minimize {
+        from {
+            height: 100vh;
+        }
+        to {
+            height: 40vh;
+        }
     }
 }
