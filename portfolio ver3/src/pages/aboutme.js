@@ -11,9 +11,15 @@ const AboutMe = ({location}) => {
 
     return (
       <Layout currentPage={location.pathname} index={false} fromIndex={fromIndex()}>
-        <>
-  
-        </>
+        <div className="aboutme grid">
+            <section className="aboutme__content">
+                <h1 className="aboutme__title content-header">About Me</h1>
+                
+            </section>
+            <div className="aboutme__background-wrap">
+                <div className="aboutme__background"></div>
+            </div>
+        </div>
       </Layout>
     )
   }

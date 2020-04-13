@@ -1,6 +1,6 @@
 .header {
     position: relative;
-    height: 100vh;
+    height: $header__height--maximized;
     background: linear-gradient(180deg,#013087,#00b3ff);
     overflow: hidden;
     transition: 0.4s;
@@ -15,13 +15,6 @@
     &__overlay {
         position: absolute;
         width: 100%;
-        
-        // svg {
-        //     position: absolute;
-        //     bottom: 0;
-        //     width: 100%;
-        //     margin-bottom: -2px;
-        // }
 
         &--1 {
             bottom: -3px;
@@ -57,26 +50,49 @@
     }
 
     &--minimized {
-        height: 40vh;
+        height: $header__height--minimized;
+
+        .header {
+            &__content {
+                grid-template-columns: 1fr 1fr;
+                width: auto;
+                max-width: 1600px;
+                transition: 0.4s;
+            }
+
+            &__signature-wrap {
+                margin-top: -15px;
+            }
+
+            &__nav-wrap {
+                padding-top: 15px;
+            }
+        }
+
+        .nav {
+            &__item {
+                width: 5vw;
+                height: 5vw;
+            }
+        }
 
         &.page-transition {
-            animation: header__animation--minimize 0.4s ease;
+            animation: header__animation--minimize 0.7s ease-in-out;
         }
     }
 
     &:not(.header--minimized) {
-
         &.page-transition {
-            animation: header__animation--minimize 0.4s ease reverse;
+            animation: header__animation--minimize 0.7s ease-in-out reverse;
         }
     }
 
     @keyframes header__animation--minimize {
         from {
-            height: 100vh;
+            height: $header__height--maximized;
         }
         to {
-            height: 40vh;
+            height: $header__height--minimized;
         }
     }
 }

@@ -24,11 +24,23 @@ const Layout = ({ children, currentPage, index, fromIndex, fromPage}) => {
     }
   `)
 
+  const pageNameCompatibility = () => (currentPage === "/") ? "home" : currentPage.substring(1)
+
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata.title} currentPage={currentPage} index={index} fromIndex={fromIndex} fromPage={fromPage} />
-        <main>{children}</main>
-        <footer>
+      <Header 
+        siteTitle={data.site.siteMetadata.title} 
+        currentPage={pageNameCompatibility()} 
+        index={index} 
+        fromIndex={fromIndex} 
+        fromPage={fromPage} 
+      />
+        <main className={`main main--${pageNameCompatibility()}`}>
+          <div className="content-wrap">          
+            {children}
+          </div>
+        </main>
+        <footer className="footer">
         </footer>
     </>
   )

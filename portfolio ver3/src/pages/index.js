@@ -12,7 +12,7 @@ const IndexPage = ({location}) => {
       }
       return false
   }
-  
+
   const fromPage = () => {
     if (location.state && location.state.fromPage) {
         return location.state.fromPage
@@ -23,7 +23,6 @@ const IndexPage = ({location}) => {
   return (
     <Layout currentPage={location.pathname} index={true} fromIndex={fromIndex()} fromPage={fromPage()}>
       <>
-
       </>
     </Layout>
   )
