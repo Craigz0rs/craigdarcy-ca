@@ -1,3 +1,5 @@
 .aboutme {
-    
+    &__background svg {
+        clip-path: url("#blah");
+    }
 }
