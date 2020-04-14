@@ -109,3 +109,25 @@ $icon-info-length3: 124;
         transition-timing-function: ease-in-out;
     }
 }
+
+.header--minimized {
+    .icon__image, .icon__image1 {
+        fill: white;
+        animation: none !important;
+
+    }
+    #projects-icon .icon__image {
+        fill: transparent;
+        stroke-dasharray: $icon-projects-length;
+        stroke-dashoffset: 0;
+        animation: none !important;
+    }
+
+    #info-icon {
+        .icon__image3 {
+            stroke-dasharray: $icon-info-length3;
+            stroke-dashoffset: 0;
+            animation: none !important;
+        }
+    }
+}
