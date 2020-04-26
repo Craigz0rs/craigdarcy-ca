@@ -39,5 +39,13 @@ module.exports = {
         }
       }
     },
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: `2xd1nqmil00b`,
+        accessToken: 'ctx6y1G4l7FD7X9UqqfGA-PiJAe2RSZDX7utSzxKZeQ',
+        downloadLocal: true,
+      },
+    },
   ],
 }
