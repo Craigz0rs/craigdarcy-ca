@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql } from 'gatsby'
 import Layout from "./layout"
 
 const Project = ({location, data}) => {
@@ -6,7 +7,7 @@ const Project = ({location, data}) => {
     return (
       <Layout currentPage={location.pathname} index={false} fromIndex={false}>
         <>
-            <h1>{console.log(project.toolkit)}</h1>
+            <h1>{project.title}</h1>
         </>
       </Layout>
     )
