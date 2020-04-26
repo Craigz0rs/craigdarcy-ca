@@ -17,3 +17,17 @@ body {
         display: none;
     }
 }
+
+.text {
+    &__gradient {
+        background-color: #013087;
+        background: linear-gradient(90deg,#013087,#00b3ff);
+        background-size: 100%;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent; 
+        -moz-text-fill-color: transparent;
+        text-decoration: none;
+    }
+}
