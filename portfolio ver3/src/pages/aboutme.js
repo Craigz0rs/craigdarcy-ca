@@ -20,7 +20,7 @@ const AboutMe = ({location}) => {
                 </p>
                 <p>
                     I've worked with agencies and small businesses to create custom WordPress solutions since 2017. Currently 
-                    working remotely for <a href="http://www.thinkmuse.ca" target="_blank" rel="noopener noreferrer" class="link--inline text__gradient">Think Muse</a> as a front-end developer.
+                    working remotely for <a href="http://www.thinkmuse.ca" target="_blank" rel="noopener noreferrer" className="link--inline text__gradient">Think Muse</a> as a front-end developer.
                 </p>
                 <p>
                     I enjoy building serverless JAMstack sites with React's Gatsby and Vue's Gridsome static site generators, while incorporating WordPress as a familiar
