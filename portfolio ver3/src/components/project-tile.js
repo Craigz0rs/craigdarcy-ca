@@ -1,9 +1,37 @@
 import React from 'react'
 import Img from "gatsby-image"
 import Overlay from "../images/header__overlay.svg"
+import Gatsby from "../images/icon__gatsby.svg"
+import ReactIcon from "../images/icon__react.svg"
+import Gridsome from "../images/icon__gridsome.svg"
 
 const ProjectTile = ({ project }) => {
     const title = project.title
+    const primaryTool = () => {
+        if (project.toolkit) {
+            let tool = project.toolkit[0]
+            if (tool === "Gatsby") {
+                return <Gatsby />
+            }
+        }
+    }
+
+    const getTool = (toolName) => {
+        switch (toolName.toLowerCase()) {
+            case "gatsby":
+                return <Gatsby />
+                break
+            case  "react":
+                return <ReactIcon />
+                break
+            case "gridsome":
+                return <Gridsome />
+                break
+            default:
+                
+        }
+    }
+
     return (
         <article className="project-tile">
             <div className="project-tile__content-wrap">
@@ -38,6 +66,18 @@ const ProjectTile = ({ project }) => {
                     style={{height: '100%', left: '-50%'}}
                     />
                 }
+            </div>
+            <div className="project-tile__toolkit">
+                <ul className="project-tile__toolkit-list">
+                    {project.toolkit && project.toolkit.map((tool, i) => 
+                        <li     
+                            className="project-tile__tool"
+                            key={i}                        
+                        >
+                            {getTool(tool)}
+                        </li>
+                    )}
+                </ul>
             </div>
             <div className="project-tile__overlay-wrap">
                 <Overlay />
