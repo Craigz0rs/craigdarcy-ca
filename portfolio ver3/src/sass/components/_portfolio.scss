@@ -1,0 +1,19 @@
+.portfolio {
+    & .grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        grid-auto-rows: 25vw;
+        grid-gap: $gutter;
+    }
+
+    &__list {
+        margin: 0;
+        list-style: none;
+    }
+
+    &__listing {
+        margin: 0;
+        height: 100%;
+        border-radius: 2%;
+        overflow: hidden;
+    }
+}

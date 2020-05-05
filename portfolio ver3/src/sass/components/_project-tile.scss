@@ -1,0 +1,33 @@
+.project-tile {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding: $gutter;
+    color: white;
+
+    &__content-wrap {
+        position: relative;
+        z-index: 10;
+    }
+
+    &__image-wrap {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+
+        .gatsby-image-wrapper {
+            height: 100%;
+        }
+    }
+
+    &__overlay-wrap {
+        position: absolute;
+        bottom: -2%;
+        width: 101%;
+        fill: white;
+        z-index: 2;
+    }
+}
