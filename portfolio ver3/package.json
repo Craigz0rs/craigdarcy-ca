@@ -16,6 +16,7 @@
     "gatsby-remark-images-contentful": "^2.3.0",
     "gatsby-source-contentful": "^2.2.10",
     "gatsby-source-filesystem": "^2.1.56",
+    "gatsby-transformer-inline-svg": "^0.0.7",
     "gatsby-transformer-sharp": "^2.3.19",
     "node-sass": "^4.13.1",
     "prop-types": "^15.7.2",

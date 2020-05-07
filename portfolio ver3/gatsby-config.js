@@ -47,5 +47,6 @@ module.exports = {
         downloadLocal: true,
       },
     },
+    `gatsby-transformer-inline-svg`,
   ],
 }
