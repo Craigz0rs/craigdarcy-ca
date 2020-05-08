@@ -3,7 +3,7 @@ body {
 }
 
 .content-wrap {
-    max-width: 1600px;
+    max-width: 1000px;
     margin: 0 auto;
     padding: $gutter;
 }
@@ -30,4 +30,9 @@ body {
         -moz-text-fill-color: transparent;
         text-decoration: none;
     }
+}
+
+.screenreader-text {
+    font-size: 0.1px;
+    color: transparent;
 }

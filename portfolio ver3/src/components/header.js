@@ -31,9 +31,11 @@ function Header({currentPage, index, fromIndex, fromPage}) {
   }
 
   return (
-  <header className={
-    classNames()
-  } onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}>
+  <header 
+    className={classNames()} 
+    onMouseMove={({ clientX: x, clientY: y }) => set({ xy: calc(x, y) })}
+    role="banner"
+  >
   {console.log(currentPage)}
     <div className="grid content-wrap header__content">
       <animated.div className="header__signature-wrap" style={{ transform: props.xy.interpolate(signature) }}>

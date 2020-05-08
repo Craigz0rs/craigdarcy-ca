@@ -1,8 +1,16 @@
 .portfolio {
     & .grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        grid-auto-rows: 25vw;
+        grid-auto-rows: minmax(25vw, 475px);
         grid-gap: $gutter;
+
+        @include screen--large {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        @include screen--small {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
     }
 
     &__list {
@@ -16,4 +24,8 @@
         border-radius: 2%;
         overflow: hidden;
     }
+}
+
+.main--portfolio .content-wrap {
+    max-width: 1600px;
 }

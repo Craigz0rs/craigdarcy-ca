@@ -1,0 +1,16 @@
+.toolkit {
+    display: flex;
+    flex-wrap: nowrap;
+    list-style-type: none;
+    margin: 0;
+
+    &__tool {
+        margin: 0;
+        margin-left: 10px;
+        width: 30px;
+
+        > svg {
+            max-height: 30px;
+        }
+    }
+}

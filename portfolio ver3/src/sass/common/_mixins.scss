@@ -1,18 +1,18 @@
 /* Breakpoints */
-  @mixin small {
+  @mixin screen--small {
     @media all and (max-width: 600px) {
       @content;
     }
   }
   
-  @mixin medium {
+  @mixin screen--medium {
     @media all and (max-width: 900px) {
       @content;
     }
   }
   
-  @mixin large {
-    @media all and (max-width: 1200px) {
+  @mixin screen--large {
+    @media all and (max-width: 1250px) {
       @content;
     }
   }

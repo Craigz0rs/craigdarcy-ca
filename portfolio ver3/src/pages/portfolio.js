@@ -52,7 +52,16 @@ export const query = graphql`
               }
             }
           }
+          logo {
+            svg {
+              content
+            }
+          }
           title
+          subheading
+          summary {
+            summary
+          }
           toolkit
           gitHub
           colorPrimary
