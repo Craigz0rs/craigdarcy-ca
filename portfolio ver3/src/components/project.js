@@ -1,15 +1,13 @@
 import React from "react"
 import { graphql } from 'gatsby'
-import Layout from "./layout"
 
-const Project = ({location, data}) => {
+const Project = ({ data }) => {
     const project = data.contentfulProject
+
     return (
-      <Layout currentPage={location.pathname} index={false} fromIndex={false}>
-        <>
-            <h1>{project.title}</h1>
-        </>
-      </Layout>
+      <>
+          <h1>{project.title}</h1>
+      </>
     )
   }
 

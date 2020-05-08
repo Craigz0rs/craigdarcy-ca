@@ -77,13 +77,13 @@
         }
 
         &.page-transition {
-            animation: header__animation--minimize 0.7s ease-in-out;
+            // animation: header__animation--minimize 0.7s ease-in-out;
         }
     }
 
     &:not(.header--minimized) {
         &.page-transition {
-            animation: header__animation--minimize 0.7s ease-in-out reverse;
+            // animation: header__animation--minimize 0.7s ease-in-out reverse;
         }
     }
 

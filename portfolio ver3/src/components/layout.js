@@ -1,10 +1,3 @@
-/**
- * Layout component that queries for data
- * with Gatsby's useStaticQuery component
- *
- * See: https://www.gatsbyjs.org/docs/use-static-query/
- */
-
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
@@ -13,7 +6,7 @@ import Header from "./header"
 import "./layout.css"
 import "../sass/styles.scss"
 
-const Layout = ({ children, currentPage, index, fromIndex, fromPage}) => {
+const Layout = ({ children, location }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -24,24 +17,24 @@ const Layout = ({ children, currentPage, index, fromIndex, fromPage}) => {
     }
   `)
 
-  const pageNameCompatibility = () => (currentPage === "/") ? "home" : currentPage.substring(1)
+  // const pageNameCompatibility = () => (currentPage === "/") ? "home" : currentPage.substring(1)
+  const pageNameCompatibility = () => (location.pathname === "/") ? "home" : location.pathname.substring(1)
+  const isIndex = () => (location.pathname === "/") ? true : false
 
   return (
     <>
       <Header 
         siteTitle={data.site.siteMetadata.title} 
         currentPage={pageNameCompatibility()} 
-        index={index} 
-        fromIndex={fromIndex} 
-        fromPage={fromPage} 
+        index={isIndex()} 
       />
-        <main className={`main main--${pageNameCompatibility()}`}>
-          <div className="content-wrap">          
-            {children}
-          </div>
-        </main>
-        <footer className="footer">
-        </footer>
+      <main className={`main main--${pageNameCompatibility()}`}>
+        <div className="content-wrap">          
+          {children}
+        </div>
+      </main>
+      <footer className="footer">
+      </footer>
     </>
   )
 }
