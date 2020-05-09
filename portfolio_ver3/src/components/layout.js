@@ -1,11 +1,10 @@
-import React, { useState } from "react"
+import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
-import { Location } from '@reach/router';
+import { globalHistory } from "@reach/router"
 import Header from "./header"
 import "./layout.css"
 import "../sass/styles.scss"
-import { globalHistory } from "@reach/router"
 
 const Layout = ({ children, location }) => {
   const data = useStaticQuery(graphql`
@@ -18,9 +17,6 @@ const Layout = ({ children, location }) => {
     }
   `)
 
-  const [thePath, setThePath] = useState("")
-
-  // const pageNameCompatibility = () => (currentPage === "/") ? "home" : currentPage.substring(1)
   const pageNameCompatibility = () => {
     if (globalHistory && globalHistory.location.pathname) {
       return globalHistory.location.pathname === "/" ? "home" : globalHistory.location.pathname.substring(1)
@@ -32,7 +28,6 @@ const Layout = ({ children, location }) => {
 
   return (
     <>
-    {console.log(globalHistory.location.pathname)}
       <Header 
         siteTitle={data.site.siteMetadata.title} 
         currentPage={pageNameCompatibility()} 
