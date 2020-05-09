@@ -21,32 +21,24 @@ const Layout = ({ children, location }) => {
   const [thePath, setThePath] = useState("")
 
   // const pageNameCompatibility = () => (currentPage === "/") ? "home" : currentPage.substring(1)
-  // const pageNameCompatibility = () => {
-  //   if (globalHistory && globalHistory.location.pathname) {
-  //     return globalHistory.location.pathname === "/" ? "home" : globalHistory.location.pathname.substring(1)
-  //   } else {
-  //     return "404"
-  //   }
-  // }
-  // const isIndex = () => (globalHistory.location.pathname === "/") ? true : false
+  const pageNameCompatibility = () => {
+    if (globalHistory && globalHistory.location.pathname) {
+      return globalHistory.location.pathname === "/" ? "home" : globalHistory.location.pathname.substring(1)
+    } else {
+      return "404"
+    }
+  }
+  const isIndex = () => (globalHistory.location.pathname === "/") ? true : false
 
   return (
     <>
-    <Location>
-      {
-        ({ location }) => {
-          setThePath(location.pathname)
-          console.log(thePath)
-        }
-      }
-      
-    </Location>
+    {console.log(globalHistory.location.pathname)}
       <Header 
         siteTitle={data.site.siteMetadata.title} 
-        // currentPage={pageNameCompatibility()} 
-        // index={isIndex()} 
+        currentPage={pageNameCompatibility()} 
+        index={isIndex()} 
       />
-      <main className={`main main--`}>
+      <main className={`main main--${pageNameCompatibility()}`}>
         <div className="content-wrap">          
           {children}
         </div>
