@@ -27,7 +27,6 @@
             bottom: 0;
             fill: rgba(255,255,255,0.5);
             right: 44%;
-            // transform: scale(2) translate(-346px, -7px) rotate(3deg);
             stroke: transparent;
         }
 
@@ -36,7 +35,7 @@
             left: 34%;
             fill: rgba(255, 255, 255, 0.3);
             stroke: transparent;
-            // transform: scale(1.2) translate(-31px, -7px) rotate(-12deg) rotateY(180deg);
+            
             @include screen--small {
                 bottom: 35px;
                 left: 35%;
@@ -73,47 +72,81 @@
     &--minimized {
         height: $header__height--minimized;
 
+        @include screen--xlarge {
+            height: 24vw;
+        }
+
         .header {
             &__content {
                 grid-template-columns: 1fr 1fr;
                 width: auto;
                 max-width: 1600px;
                 transition: 0.4s;
+
+                @include screen--medium {
+                    grid-template-columns: 2fr 3fr;
+                }
+
+                @include screen--small {
+                    padding: 0.75rem $gutter;
+                }
             }
 
             &__signature-wrap {
                 margin-top: -15px;
+
+                @include screen--small {
+                    margin-top: 0;
+                }
             }
 
             &__nav-wrap {
                 padding-top: 15px;
+
+                @include screen--medium {
+                    padding-top: 0;
+                }
+
+                @include screen--small {
+                    margin-top: 0;
+                }
+            }
+
+            &__overlay-wrap {
+                @include screen--xsmall {
+                    bottom: -2px;
+                }
+            }
+
+            &__overlay--3 {
+                @include screen--medium {
+                    bottom: 7vw;
+                }
             }
         }
 
         .nav {
+            @include screen--small {
+                padding: 0 0 0 25px;
+            }
+
             &__item {
                 width: 5vw;
                 height: 5vw;
+
+                max-width: 100px;
+                
+                @include screen--medium {
+                    width: 7vw;
+                    height: 7vw;
+                }
+
+                > svg {
+                    @include screen--small {
+                       width: auto; 
+                    }
+                }
             }
-        }
-
-        &.page-transition {
-            // animation: header__animation--minimize 0.7s ease-in-out;
-        }
-    }
-
-    &:not(.header--minimized) {
-        &.page-transition {
-            // animation: header__animation--minimize 0.7s ease-in-out reverse;
-        }
-    }
-
-    @keyframes header__animation--minimize {
-        from {
-            height: $header__height--maximized;
-        }
-        to {
-            height: $header__height--minimized;
         }
     }
 }
