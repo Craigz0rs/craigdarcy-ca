@@ -32,6 +32,15 @@ const Layout = ({ children, location }) => {
 
   return (
     <>
+    <Location>
+      {
+        ({ location }) => {
+          setThePath(location.pathname)
+          console.log(thePath)
+        }
+      }
+      
+    </Location>
       <Header 
         siteTitle={data.site.siteMetadata.title} 
         // currentPage={pageNameCompatibility()} 
