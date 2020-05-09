@@ -37,6 +37,10 @@
             fill: rgba(255, 255, 255, 0.3);
             stroke: transparent;
             // transform: scale(1.2) translate(-31px, -7px) rotate(-12deg) rotateY(180deg);
+            @include screen--small {
+                bottom: 35px;
+                left: 35%;
+            }
         }
     }
 
@@ -46,7 +50,24 @@
     }
 
     &__signature-wrap {
-        margin-top: 20vh;
+        margin-top: 17%;
+        
+        > a {
+            outline: none !important;
+        }
+
+        @include screen--small {
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__nav-wrap {
+        @media screen and (max-width: 600px) {       
+            @media screen and (min-height: 700px) {
+                margin-top: 25px;
+            }
+        }
     }
 
     &--minimized {
