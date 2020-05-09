@@ -18,7 +18,13 @@ const Layout = ({ children, location }) => {
   `)
 
   // const pageNameCompatibility = () => (currentPage === "/") ? "home" : currentPage.substring(1)
-  const pageNameCompatibility = () => (location.pathname === "/") ? "home" : location.pathname.substring(1)
+  const pageNameCompatibility = () => {
+    if (location && location.pathname) {
+      return location.pathname === "/" ? "home" : location.pathname.substring(1)
+    } else {
+      return "404"
+    }
+  }
   const isIndex = () => (location.pathname === "/") ? true : false
 
   return (
