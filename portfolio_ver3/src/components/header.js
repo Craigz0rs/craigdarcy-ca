@@ -23,6 +23,13 @@ function Header({currentPage, index}) {
     return classes
   }
 
+  const soonStyle = {
+    color: "white",
+    textAlign: "center",
+    fontSize: "2rem",
+    fontWeight: "400"
+  }
+
   return (
   <header 
     className={classNames()} 
@@ -35,7 +42,9 @@ function Header({currentPage, index}) {
         </Link>
       </animated.div>
       <div className="header__nav-wrap">
-        <Nav isIndex={index}/>
+        <h2 
+          style={soonStyle}
+        >Coming Soon</h2>
       </div>
     </div>
     <div className="header__overlay-wrap">
