@@ -30,12 +30,12 @@ function Header({currentPage, index}) {
   >
     <div className="grid content-wrap header__content">
       <animated.div className="header__signature-wrap" style={{ transform: props.xy.interpolate(signature) }}>
-        <Link to="/" state={index ? {fromIndex: true, fromPage: false} : {fromIndex: false, fromPage: true}}>
+        <Link to="/" >
           <Signature />
         </Link>
       </animated.div>
       <div className="header__nav-wrap">
-        <Nav isIndex={index}/>
+        <Nav />
       </div>
     </div>
     <div className="header__overlay-wrap">
