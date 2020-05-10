@@ -8,7 +8,10 @@ const Portfolio = ({ data }) => {
 
     return (
       <>
-        <SEO title="A sample of my web development work to date" />
+        <SEO 
+          title="Portfolio Projects"
+          description="Select JAMstack and WordPress projects I have created over the years. Take a look at what I can do!"
+        />
         <div className="portfolio grid">
           <section className="portfolio__content">
             <ul className="portfolio__list grid">

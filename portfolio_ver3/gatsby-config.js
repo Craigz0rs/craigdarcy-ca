@@ -3,6 +3,7 @@ module.exports = {
     title: `Craig D'Arcy`,
     description: `JAMstack and WordPress development portfolio featuring serverless websites built with React Gatsby, Vue Gridsome using WordPress and Contentful as headless CMS.`,
     author: `Craig D'Arcy`,
+    image: `src/images/site-image.jpg`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
