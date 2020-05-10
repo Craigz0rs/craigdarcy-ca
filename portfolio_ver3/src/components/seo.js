@@ -90,7 +90,7 @@ function SEO({ description, lang, meta, image: metaImage, title }) {
         image
           ? [
               {
-                property: "og:image",
+                property: "og:image:secure_url",
                 content: `${globalHistory.location.origin}${image.src}`,
               },
               {
