@@ -30,7 +30,7 @@ function Header({currentPage, index}) {
   >
     <div className="grid content-wrap header__content">
       <animated.div className="header__signature-wrap" style={{ transform: props.xy.interpolate(signature) }}>
-        <Link to="/" >
+        <Link to="/" aria-label="home">
           <Signature />
         </Link>
       </animated.div>

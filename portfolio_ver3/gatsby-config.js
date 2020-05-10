@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Craig D'Arcy`,
+    description: `JAMstack and WordPress development portfolio featuring serverless websites built with React Gatsby, Vue Gridsome using WordPress and Contentful as headless CMS.`,
+    author: `Craig D'Arcy`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -18,13 +18,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `JAMstack & WordPress Development Portfolio | Craig D'Arcy`,
+        short_name: `Craig D'Arcy`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#fff`,
+        theme_color: `rgb(2, 66, 153)`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/favicon.svg`,
       },
     },
     'gatsby-plugin-sass',    

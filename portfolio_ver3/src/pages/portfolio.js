@@ -1,25 +1,29 @@
 import React from "react"
 import { graphql } from "gatsby"
 import ProjectTile from "../components/project-tile"
+import SEO from "../components/seo"
 
 const Portfolio = ({ data }) => {
     const projects = data.allContentfulProject.edges
 
     return (
-      <div className="portfolio grid">
-        <section className="portfolio__content">
-          <ul className="portfolio__list grid">
-            {projects.map((project) =>
-              <li 
-                key={project.node.contentful_id}
-                className="portfolio__listing"
-              >
-                <ProjectTile project={project.node} /> 
-              </li>
-            )}
-          </ul>
-        </section>
-      </div>
+      <>
+        <SEO title="A sample of my web development work to date" />
+        <div className="portfolio grid">
+          <section className="portfolio__content">
+            <ul className="portfolio__list grid">
+              {projects.map((project) =>
+                <li 
+                  key={project.node.contentful_id}
+                  className="portfolio__listing"
+                >
+                  <ProjectTile project={project.node} /> 
+                </li>
+              )}
+            </ul>
+          </section>
+        </div>
+      </>
     )
   }
 
