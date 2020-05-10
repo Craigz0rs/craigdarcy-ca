@@ -7,15 +7,20 @@
 
     &__background {
         position: fixed;
-        right: -50vw;
-        top: -200px;
-        height: 100vh;
+        right: -38vw;
+        top: 20vw;
         width: 100%;
         transform: rotate(109deg);
 
         svg {
             fill: rgba(0,0,0,0.05);
-            // clip-path: url("#blah");
+        }
+
+        @include screen--small {
+            right: -39%;
+            bottom: 0;
+            top: auto;
+            width: 115%;
         }
     }
 }
