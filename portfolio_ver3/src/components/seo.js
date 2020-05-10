@@ -11,7 +11,7 @@ import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
 function SEO({ description, lang, meta, image: metaImage, title }) {
-  const { site } = useStaticQuery(
+  const data = useStaticQuery(
     graphql`
       query {
         site {
@@ -23,7 +23,7 @@ function SEO({ description, lang, meta, image: metaImage, title }) {
         }
         file(relativePath: {eq: "site-image.jpg"}) {
           childImageSharp {
-            fixed(height: 900, width: 1200, quality: 100, fit: COVER) {
+            fixed(height: 600, width: 1200, quality: 100, fit: COVER) {
               src
               width
               height
@@ -34,23 +34,25 @@ function SEO({ description, lang, meta, image: metaImage, title }) {
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
+  const metaDescription = description || data.site.siteMetadata.description
   const defaultImg = 
-  site.file && site.file.childImageSharp.fixed 
-    ? `${site.siteMetadata.siteUrl}${site.file.childImageSharp.fixed.src}`
+  data.file && data.file.childImageSharp.fixed 
+    ? data.file.childImageSharp.fixed 
     : null
   const image =
   metaImage && metaImage.src
-    ? `${site.siteMetadata.siteUrl}${metaImage.src}`
+    ? metaImage
     : defaultImg
   
   return (
+    <>
+    {console.log(data)}
     <Helmet
       htmlAttributes={{
         lang,
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`%s | ${data.site.siteMetadata.title}`}
       meta={[
         {
           name: `description`,
@@ -74,7 +76,7 @@ function SEO({ description, lang, meta, image: metaImage, title }) {
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata.author,
+          content: data.site.siteMetadata.author,
         },
         {
           name: `twitter:title`,
@@ -85,19 +87,19 @@ function SEO({ description, lang, meta, image: metaImage, title }) {
           content: metaDescription,
         },
       ].concat(
-        metaImage
+        image
           ? [
               {
                 property: "og:image",
-                content: image,
+                content: image.src,
               },
               {
                 property: "og:image:width",
-                content: metaImage.width,
+                content: image.width,
               },
               {
                 property: "og:image:height",
-                content: metaImage.height,
+                content: image.height,
               },
               {
                 name: "twitter:card",
@@ -112,7 +114,7 @@ function SEO({ description, lang, meta, image: metaImage, title }) {
             ]
       )
       .concat(meta)}
-    />
+    /></>
   )
 }
 
