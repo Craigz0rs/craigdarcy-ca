@@ -47,6 +47,7 @@ function SEO({ description, lang, meta, image: metaImage, title }) {
   
   return (
     <>
+    {console.log(globalHistory.location.origin)}
     <Helmet
       htmlAttributes={{
         lang,
@@ -61,6 +62,10 @@ function SEO({ description, lang, meta, image: metaImage, title }) {
         {
           property: `og:title`,
           content: title,
+        },
+        {
+          property: `og:url`,
+          content: globalHistory.location.origin
         },
         {
           property: `og:description`,
