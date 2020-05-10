@@ -9,6 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import { globalHistory } from "@reach/router"
 
 function SEO({ description, lang, meta, image: metaImage, title }) {
   const data = useStaticQuery(
@@ -46,7 +47,6 @@ function SEO({ description, lang, meta, image: metaImage, title }) {
   
   return (
     <>
-    {console.log(data)}
     <Helmet
       htmlAttributes={{
         lang,
@@ -91,7 +91,7 @@ function SEO({ description, lang, meta, image: metaImage, title }) {
           ? [
               {
                 property: "og:image",
-                content: image.src,
+                content: `${globalHistory.location.origin}${image.src}`,
               },
               {
                 property: "og:image:width",
