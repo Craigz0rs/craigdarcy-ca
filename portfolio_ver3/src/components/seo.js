@@ -23,11 +23,11 @@ function SEO({ description, lang, meta, image: metaImage, title }) {
           }
         }
         file(relativePath: {eq: "site-image.jpg"}) {
+          absolutePath
           childImageSharp {
-            fixed(height: 600, width: 1200, quality: 100, fit: COVER) {
-              src
-              width
+            original {
               height
+              width
             }
           }
         }
@@ -37,8 +37,8 @@ function SEO({ description, lang, meta, image: metaImage, title }) {
 
   const metaDescription = description || data.site.siteMetadata.description
   const defaultImg = 
-  data.file && data.file.childImageSharp.fixed 
-    ? data.file.childImageSharp.fixed 
+  data.file && data.file.absolutePath
+    ? {src: data.file.absolutePath, height: data.file.childImageSharp.original.height, width: data.file.childImageSharp.original.width} 
     : null
   const image =
   metaImage && metaImage.src
@@ -47,7 +47,6 @@ function SEO({ description, lang, meta, image: metaImage, title }) {
   
   return (
     <>
-    {console.log(globalHistory.location.origin)}
     <Helmet
       htmlAttributes={{
         lang,
