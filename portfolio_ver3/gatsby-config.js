@@ -5,7 +5,7 @@ require('dotenv').config({
 module.exports = {
   siteMetadata: {
     title: `Craig D'Arcy`,
-    description: `JAMstack and WordPress development portfolio featuring serverless websites built with React Gatsby, Vue Gridsome using WordPress and Contentful as headless CMS.`,
+    description: `My web development portfolio featuring WordPress and serverless & headless CMS JAMstack websites built with React Gatsby, and Vue Gridsome.`,
     author: `Craig D'Arcy`,
     image: `src/images/site-image.jpg`,
     siteUrl: `https://craigdarcy.ca`,

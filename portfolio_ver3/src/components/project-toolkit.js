@@ -28,10 +28,11 @@ const ProjectToolkit = ({ toolkit }) => {
         }
     }
     return (
-        <ul className="toolkit">
+        <ul className="toolkit" aria-label="Project toolkit">
             {toolkit && toolkit.map((tool, i) => 
                 <li     
                     className="toolkit__tool"
+                    aria-label={tool}
                     key={i}                        
                 >
                     {getTool(tool)}

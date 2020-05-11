@@ -15,7 +15,8 @@ const Portfolio = ({ data }) => {
         />
         <div className="portfolio grid">
           <section className="portfolio__content">
-            <ul className="portfolio__list grid">
+            <h1 className="screenreader-text">Portfolio</h1>
+            <ul className="portfolio__list grid" aria-label="Projects">
               {projects.map((project) =>
                 <li 
                   key={project.node.contentful_id}
