@@ -8,7 +8,7 @@ import "../sass/styles.scss"
 const Layout = ({ children }) => {
   const pageNameCompatibility = () => {
     if (globalHistory && globalHistory.location.pathname) {
-      return globalHistory.location.pathname === "/" ? "home" : globalHistory.location.pathname.substring(1)
+      return globalHistory.location.pathname === "/" ? "home" : globalHistory.location.pathname.replace(new RegExp('/', 'g'), '')
     } else {
       return "404"
     }
