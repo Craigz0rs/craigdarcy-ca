@@ -22,18 +22,18 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `JAMstack & WordPress Development Portfolio | Craig D'Arcy`,
-        short_name: `Craig D'Arcy`,
-        start_url: `/`,
-        background_color: `#fff`,
-        theme_color: `rgb(2, 66, 153)`,
-        display: `browser`,
-        icon: `src/images/favicon.svg`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-manifest`,
+    //   options: {
+    //     name: `JAMstack & WordPress Development Portfolio | Craig D'Arcy`,
+    //     short_name: `Craig D'Arcy`,
+    //     start_url: `/`,
+    //     background_color: `#fff`,
+    //     theme_color: `rgb(2, 66, 153)`,
+    //     display: `browser`,
+    //     icon: `src/images/favicon.svg`,
+    //   },
+    // },
     'gatsby-plugin-sass',    
     `gatsby-plugin-offline`,
     {
