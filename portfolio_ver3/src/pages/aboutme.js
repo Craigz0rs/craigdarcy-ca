@@ -1,10 +1,11 @@
 import React from "react"
 import Background1 from "../images/background1.svg"
 import SEO from "../components/seo"
+import Layout from "../components/layout"
 
 const AboutMe = () => {
     return (
-        <>
+        <Layout>
         <SEO 
             title="About Me"
             description="All about me, my work, and the things I like to do with code."
@@ -30,7 +31,7 @@ const AboutMe = () => {
                 </div>
             </div>
         </div>
-    </>
+    </Layout>
     )
   }
 

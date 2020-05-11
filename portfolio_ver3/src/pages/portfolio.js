@@ -2,12 +2,13 @@ import React from "react"
 import { graphql } from "gatsby"
 import ProjectTile from "../components/project-tile"
 import SEO from "../components/seo"
+import Layout from "../components/layout"
 
 const Portfolio = ({ data }) => {
     const projects = data.allContentfulProject.edges
 
     return (
-      <>
+      <Layout>
         <SEO 
           title="Portfolio Projects"
           description="Select JAMstack and WordPress projects I have created over the years. Take a look at what I can do!"
@@ -26,7 +27,7 @@ const Portfolio = ({ data }) => {
             </ul>
           </section>
         </div>
-      </>
+      </Layout>
     )
   }
 
