@@ -25,6 +25,16 @@ $transition__duration--return: 0.3s;
         width: 100%;
         fill: white;
         transition: 0.4s;
+
+        @media screen and (max-width: 800px) {
+            margin-top: 18%;
+            padding: 0 3rem;
+        }
+
+        @include screen--small {
+            margin-top: 25%;
+            padding: 0;
+        }
     }
 
     &__title {
@@ -133,6 +143,7 @@ $transition__duration--return: 0.3s;
         .project-tile__logo-wrap {
             margin-top: 0;
             margin-bottom: 0;
+            padding: 0;
             width: 60%;
             transition: 0.4s;
         }

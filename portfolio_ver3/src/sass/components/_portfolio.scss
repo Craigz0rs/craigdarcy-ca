@@ -8,8 +8,17 @@
             grid-template-columns: repeat(2, minmax(0, 1fr));
         }
 
-        @include screen--small {
+        @include screen--medium {
+            grid-auto-rows: minmax(30vw, 515px);
+        }
+
+        @media screen and (max-width: 800px) {
             grid-template-columns: repeat(1, minmax(0, 1fr));
+            grid-auto-rows: minmax(25vw, 475px);
+        }
+
+        @include screen--small {
+            
         }
     }
 

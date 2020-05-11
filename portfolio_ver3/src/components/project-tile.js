@@ -69,7 +69,7 @@ const ProjectTile = ({ project }) => {
             <div className="project-tile__image-wrap">
                 {project.summaryImage && project.summaryImage.localFile.childImageSharp.fixed &&
                     <Img fixed={ project.summaryImage.localFile.childImageSharp.fixed} 
-                    style={{height: '100%', left: '-50%'}}
+                    style={{height: '100%', width: '100%'}}
                     />
                 }
             </div>
