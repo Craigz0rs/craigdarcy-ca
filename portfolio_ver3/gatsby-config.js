@@ -8,7 +8,8 @@ module.exports = {
     description: `JAMstack and WordPress development portfolio featuring serverless websites built with React Gatsby, Vue Gridsome using WordPress and Contentful as headless CMS.`,
     author: `Craig D'Arcy`,
     image: `src/images/site-image.jpg`,
-    siteUrl: `https://craigdarcy.ca`
+    siteUrl: `https://craigdarcy.ca`,
+    theme: `rgb(2, 66, 153)`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -29,7 +30,7 @@ module.exports = {
         start_url: `/`,
         background_color: `#fff`,
         theme_color: `rgb(2, 66, 153)`,
-        display: `minimal-ui`,
+        display: `browser`,
         icon: `src/images/favicon.svg`,
       },
     },

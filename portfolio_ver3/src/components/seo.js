@@ -21,6 +21,7 @@ function SEO({ description, lang, meta, image: metaImage, title }) {
             description
             author
             siteUrl
+            theme
           }
         }
         file(relativePath: {eq: "site-image.jpg"}) {
@@ -60,6 +61,10 @@ function SEO({ description, lang, meta, image: metaImage, title }) {
           content: metaDescription,
         },
         {
+          name: `theme-color`,
+          content: data.site.siteMetadata.theme,
+        },
+        {
           property: `og:title`,
           content: title,
         },
@@ -96,6 +101,10 @@ function SEO({ description, lang, meta, image: metaImage, title }) {
           ? [
               {
                 property: "og:image:secure_url",
+                content: `${data.site.siteMetadata.siteUrl}${image.src}`,
+              },
+              {
+                property: "og:image",
                 content: `${data.site.siteMetadata.siteUrl}${image.src}`,
               },
               {
