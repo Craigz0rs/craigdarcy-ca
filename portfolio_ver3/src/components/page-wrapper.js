@@ -15,11 +15,13 @@ const PageWrapper = ({ children }) => {
 
     return (
         <>
-            <Header 
-                currentPage={pageNameCompatibility()} 
-                index={isIndex()} 
-            />
-            {children}
+            <div className={`site-wrap site-wrap--${pageNameCompatibility()}`}>
+                <Header 
+                    currentPage={pageNameCompatibility()} 
+                    index={isIndex()} 
+                />
+                {children}
+            </div>
         </>
     )
 }

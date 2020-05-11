@@ -18,6 +18,10 @@ body {
     }
 }
 
+.site-wrap:not(.site-wrap--home) .main--home {
+    display: block
+}
+
 .text {
     &__gradient {
         background-color: #013087;

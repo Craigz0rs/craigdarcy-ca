@@ -16,7 +16,6 @@ const Layout = ({ children }) => {
 
   return (
     <>
-    {console.log(globalHistory.location)}
       <main className={`main main--${pageNameCompatibility()}`}>
         <div className="content-wrap">          
           {children}
