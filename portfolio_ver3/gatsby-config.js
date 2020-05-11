@@ -4,6 +4,7 @@ module.exports = {
     description: `JAMstack and WordPress development portfolio featuring serverless websites built with React Gatsby, Vue Gridsome using WordPress and Contentful as headless CMS.`,
     author: `Craig D'Arcy`,
     image: `src/images/site-image.jpg`,
+    siteUrl: `https://craigdarcy.ca`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -29,9 +30,7 @@ module.exports = {
       },
     },
     'gatsby-plugin-sass',    
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-plugin-offline`,
     {
       resolve: "gatsby-plugin-react-svg",
       options: {

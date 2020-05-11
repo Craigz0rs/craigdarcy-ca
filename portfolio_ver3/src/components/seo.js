@@ -20,14 +20,15 @@ function SEO({ description, lang, meta, image: metaImage, title }) {
             title
             description
             author
+            siteUrl
           }
         }
         file(relativePath: {eq: "site-image.jpg"}) {
-          absolutePath
           childImageSharp {
-            original {
-              height
+            fixed(height: 600, width: 1200, quality: 100, fit: COVER) {
+              src
               width
+              height
             }
           }
         }
@@ -37,8 +38,8 @@ function SEO({ description, lang, meta, image: metaImage, title }) {
 
   const metaDescription = description || data.site.siteMetadata.description
   const defaultImg = 
-  data.file && data.file.absolutePath
-    ? {src: data.file.absolutePath, height: data.file.childImageSharp.original.height, width: data.file.childImageSharp.original.width} 
+  data.file && data.file.childImageSharp.fixed
+    ? {src: data.file.childImageSharp.fixed.src, height: data.file.childImageSharp.fixed.height, width: data.file.childImageSharp.fixed.width} 
     : null
   const image =
   metaImage && metaImage.src
@@ -95,7 +96,7 @@ function SEO({ description, lang, meta, image: metaImage, title }) {
           ? [
               {
                 property: "og:image:secure_url",
-                content: `${image.src}`,
+                content: `${data.site.siteMetadata.siteUrl}${image.src}`,
               },
               {
                 property: "og:image:width",
