@@ -4,19 +4,11 @@ import Layout from "../components/layout"
 import ProjectTile from "../components/project-tile"
 
 const Portfolio = ({ location, data }) => {
-    const fromIndex = () => {
-        if (location.state && location.state.fromIndex) {
-            return location.state.fromIndex
-        }
-        return false
-    }
+
     const projects = data.allContentfulProject.edges
 
     return (
       <Layout 
-        currentPage={location.pathname} 
-        index={false} 
-        fromIndex={fromIndex()}
       >
         <div className="portfolio grid">
           <section className="portfolio__content">

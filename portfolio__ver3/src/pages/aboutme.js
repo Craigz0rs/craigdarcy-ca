@@ -11,7 +11,7 @@ const AboutMe = ({location}) => {
     }
 
     return (
-      <Layout currentPage={location.pathname} index={false} fromIndex={fromIndex()}>
+      <Layout >
         <div className="aboutme grid">
             <section className="aboutme__content">
                 <h1 className="aboutme__title content-header text__gradient">About Me</h1>
