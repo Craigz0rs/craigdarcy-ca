@@ -25,7 +25,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `JAMstack & WordPress Development Portfolio | Craig D'Arcy`,
+        name: `Craig D'Arcy | JAMstack & WordPress Developer and Designer`,
         short_name: `Craig D'Arcy`,
         start_url: `/`,
         background_color: `#fff`,

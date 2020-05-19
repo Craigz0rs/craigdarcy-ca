@@ -5,7 +5,7 @@ import Layout from "../components/layout"
 const IndexPage = () => {
   return (
       <Layout>
-        <SEO title="JAMstack & WordPress Design and Development Portfolio" />
+        <SEO title="JAMstack & WordPress Developer and Designer" />
       </Layout>
   )
 }
